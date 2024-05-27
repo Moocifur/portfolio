@@ -79,9 +79,9 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* height: auto; */
     padding: 20px;
 }
+
 .project-container .projects {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -137,6 +137,31 @@ body {
 .footer p {
     margin: 10px 0 0;
     color: #666;
+}
+
+/*media queries*/
+@media (max-width: 1024px) {
+    .project-container .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-me .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stories-container .stories-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me .skills {
+        grid-template-columns: 1fr;
+    }
 }
 
 
