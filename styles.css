@@ -3,34 +3,34 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(20, 26, 36);
+    overflow-x: hidden;
+}
+
+.header, .intro, .project-container, .about-me, .stories-container, .footer {
+    width: 100%;
+    padding: 20px 0;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-}
-
-.header, .intro, .about-me, .project-container, .stories-container, .footer {
     width: 100%;
     max-width: 1200px;
-    margin: 20px 0;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #fff;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(20, 26, 36);
+    color: white;
 }
 
-.header .left-header {
+.left-header {
     display: flex;
     align-items: center;
+    padding-left: 40px;
 }
 
 .header .left-header .logo {
@@ -39,10 +39,18 @@ body {
     margin-right: 10px;
 }
 
+.link-header {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
 .header .link-header ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .header .link-header ul li {
@@ -51,10 +59,14 @@ body {
 
 .intro {
     text-align: center;
+    background-color: rgb(20, 26, 36);
+    color: white;
 }
 
 .about-me {
     text-align: center;
+    background-color: rgb(36, 43, 55);
+    color: white;
 }
 
 .about-me .skills {
@@ -78,8 +90,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding: 20px;
+    background-color: rgb(20, 26, 36);
+    color: white;
 }
 
 .project-container .projects {
@@ -87,7 +99,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     width: 100%;
-    max-width:1200px;
 }
 
 .project {
@@ -100,6 +111,8 @@ body {
 }
 
 .stories-container {
+    background-color: rgb(36, 43, 55);
+    color: white;
     text-align: center;
 }
 
@@ -124,8 +137,8 @@ body {
 
 .footer {
     text-align: center;
-    width: 100%;
     padding: 20px;
+    background-color: rgb(36, 43, 55);
 }
 
 .footer hr {
@@ -136,7 +149,7 @@ body {
 
 .footer p {
     margin: 10px 0 0;
-    color: #666;
+    color: lightgray;
 }
 
 /*media queries*/
@@ -163,8 +176,3 @@ body {
         grid-template-columns: 1fr;
     }
 }
-
-
-
-
-
