@@ -119,6 +119,11 @@ body {
 
 .project {
     text-align: center;
+    background-color: rgb(36, 43, 55);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+    transition: transform 0.3, box-shadow 0.3s;
 }
 
 .project a {
@@ -135,6 +140,7 @@ body {
     margin-bottom: 10px;
     /* border-radius: 8px; */
     transition: transform 0.3s, box-shadow 0.3s;
+    filter: invert(72%) sepia(83%) saturate(3475%) hue-rotate(-20deg) brightness(95%) contrast(90%);
 }
 
 .project img:hover {
