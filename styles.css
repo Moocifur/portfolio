@@ -55,6 +55,22 @@ body {
 
 .header .link-header ul li {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.link-header ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    filter: invert(100%);
+}
+
+.link-header ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 }
 
 .intro {
@@ -105,9 +121,32 @@ body {
     text-align: center;
 }
 
+.project a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .project img {
     width: 100px;
     height: 100px;
+    margin-bottom: 10px;
+    /* border-radius: 8px; */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-name {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
 }
 
 .stories-container {
