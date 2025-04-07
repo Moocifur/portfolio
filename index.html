@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- nav bar -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo-content">
+                <img src="assets/logo.png" alt="logo" class="logo">
+                <div class="logo-title">Dave's Web Construction</div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-toggle">☰</button>
+                <div class="dropdown-content">
+                    <a href="#about">About</a>
+                    <a href="#projects">Work and Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- about -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <img src="assets/about.png" alt="about-img" class="about-img">
+            <div class="about-content">
+                <h2>Building Digital Solutions</h2>
+                <p>I'm Dave, a freelance web developer focused on creating straightforward, user-friendly websites and applications. I specialize in building digital solutions that are clean, functional, and easy to navigate. My goal is to help businesses establish an effective online presence through simple yet impactful web design that works for both you and your customers.</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Work -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h1>Projects / Work</h1>
+            <div class="project-container">
+                <!-- <div class="project-card">
+                    <img src="assets/project1.jpg" alt="Project 1">
+                    <h3>Orthodontics Site</h3>
+                    <p>A real world Orthotontics site, made to be stylish, showcasing what we're about and our services with the thought of user friendliness first!</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div> -->
+                <div class="project-card">
+                    <img src="assets/barbook.png" alt="Project 2">
+                    <h3>Barbook</h3>
+                    <p>Build for Bartenders to have a quickdraw, to the point library of cockails, with quick snippets of info of spirits, methods, and how I like to bartend. I use it myself as my own reference book of cocktails.</p>
+                    <a href="https://moocifur.github.io/barbook/" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="assets/weather.png" alt="Project 3">
+                    <h3>Weather App</h3>
+                    <p>Showcases clean user interface, solid build to handle edge cases, and ability to use APIs, cause most likely you'll be needing them.</p>
+                    <a href="https://moocifur.github.io/weather-app-one/" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Content-->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <textarea type="text" name="message" placeholder="Message..." rows="5"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="mailto:davidkttran@gmail.com[]"><i class="icon-email"></i></a>
+                <a href="https://instagram.com/__chilledcow_"><i class="icon-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/david-tran-904086292"><i class="icon-linkedin"></i></a>
+                <a href="https://github.com/moocifur"><i class="icon-github"></i></a>
+            </div>
+            <div class="footer-line">Made by Moocifur 2025</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
