@@ -1,98 +1,157 @@
-<!-- index.html  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David's Portfolio</title>
+    <title>David Tran - Web Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <!-- Header Section -->
+        <section class="header">
+            <h1>David Tran</h1>
+            <p>Self-Taught Web Developer specializing in JavaScript & Modern Web Technologies</p>
+            <div class="nav-buttons">
+                <a href="#projects" class="nav-btn">My Work</a>
+                <a href="#contact" class="nav-btn">Get In Touch</a>
+            </div>
+            <div class="wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
 
-    <!-- nav bar -->
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo-content">
-                    <img src="assets/logo.png" alt="logo" class="logo">
-                    <div class="logo-title">David's Web Development</div>
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <h2 class="section-title">Projects & Examples</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🏥</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Lane Orthodontics Website</h3>
+                        <p class="project-description">A comprehensive orthodontic practice website featuring dual-location functionality, interactive forms, image carousels, and responsive design. Built for a local business with advanced location switching and mobile navigation.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">JotForm API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://moocifur.github.io/lane-orthodontics[]" class="project-link primary">Live Demo</a>
+                            <a href="https://github.com/moocifur/lane-orthodontics" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropdown-toggle">☰</button>
-                    <div class="dropdown-content">
-                        <a href="#about">About</a>
-                        <a href="#projects">Work and Projects</a>
-                        <a href="#contact">Contact</a>
+
+                <div class="project-card">
+                    <div class="project-image">🍸</div>
+                    <div class="project-content">
+                        <h3 class="project-title">David's Barbook</h3>
+                        <p class="project-description">A comprehensive cocktail recipe database with search functionality, favorites system, and detailed preparation instructions. Features over 100 classic and modern cocktail recipes with ingredient filtering.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Webpack</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://moocifur.github.io/barbook" class="project-link primary">Live Demo</a>
+                            <a href="https://github.com/moocifur/barbook" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🌤️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-description">A responsive weather application that fetches real-time weather data from Visual Crossing API. Features location search, temperature unit toggle, 3-day forecasts, and dynamic backgrounds based on weather conditions.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">HTML5</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://moocifur.github.io/weather-app-one" class="project-link primary">Live Demo</a>
+                            <a href="https://github.com/moocifur/weather-app-one" class="project-link secondary">View Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- about -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <img src="assets/about.jpg" alt="about-img" class="about-img">
-            <div class="about-content">
-                <h2>Building Digital Solutions</h2>
-                <p>I'm David, a web developer focused on creating straightforward, user-friendly websites and applications. My goal is building digital solutions that are clean, functional, and easy to navigate. I want help businesses establish an effective online presence through simple yet impactful web design that works for both the clients and their customers.</p>
-                <a href="#contact" class="cta-button">Get in Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects / Work -->
-    <section class="projects-section" id="projects">
-        <div class="container">
-            <h1>Projects / Work</h1>
-            <div class="project-container">
-                <div class="project-card">
-                    <img src="assets/ortho.png" alt="Project 1">
-                    <h3>Orthodontics Site</h3>
-                    <p>A professional website for a local orthodontics practice, designed with both aesthetics and functionality in mind. Features include an intuitive appointment booking system, patient testimonials, treatment information, and a responsive design that works seamlessly across all devices. This project showcases my ability to create healthcare-focused websites that balance professional presentation with user-friendly navigation.</p>
-                    <a href="https://moocifur.github.io/lane-orthodontics/" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="assets/barbook.png" alt="Project 2">
-                    <h3>Barbook</h3>
-                    <p>Build for Bartenders to have a quickdraw, to the point library of cockails, with quick snippets of info of spirits, methods, and how I like to bartend. I use it myself as my own reference book of cocktails.</p>
-                    <a href="https://moocifur.github.io/barbook/" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="assets/weather.png" alt="Project 3">
-                    <h3>Weather App</h3>
-                    <p>Showcases clean user interface, solid build to handle edge cases, and ability to use APIs, cause most likely you'll be needing them.</p>
-                    <a href="https://moocifur.github.io/weather-app-one/" class="project-link">View Project</a>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-content">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="contact-text">Ready to bring your ideas to life? I have experience building websites for local businesses and would love to help establish your digital presence.</p>
+                <div class="contact-icons">
+                    <a href="mailto:davidkttran@gmail.com" class="contact-icon">
+                        <span class="contact-icon-symbol">📧</span>
+                        <span class="contact-icon-text">Email</span>
+                    </a>
+                    <a href="https://instagram.com/__chilledcow_" class="contact-icon">
+                        <span class="contact-icon-symbol">📸</span>
+                        <span class="contact-icon-text">Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/david-tran-904086292" class="contact-icon">
+                        <span class="contact-icon-symbol">💼</span>
+                        <span class="contact-icon-text">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/moocifur" class="contact-icon">
+                        <span class="contact-icon-symbol">💻</span>
+                        <span class="contact-icon-text">GitHub</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--Content-->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-                <textarea type="text" name="message" placeholder="Message..." rows="5"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-icons">
-                <a href="mailto:davidkttran@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://instagram.com/__chilledcow_"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/david-tran-904086292"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/moocifur"><i class="fa-brands fa-github"></i></a>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>About</h3>
+                        <p>Self-taught developer with 2+ years of dedicated learning through The Odin Project. I've built websites for local businesses and have hands-on experience with modern web technologies, API integrations, and responsive design.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>JavaScript (ES6+)</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>API Integration</li>
+                            <li>Responsive Design</li>
+                            <li>Git & GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Experience</h3>
+                        <ul>
+                            <li>Business Website Development</li>
+                            <li>Interactive Web Applications</li>
+                            <li>Complex State Management</li>
+                            <li>Mobile-First Design</li>
+                            <li>Form & API Integration</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="https://github.com/moocifur">GitHub</a></li>
+                            <li><a href="mailto:david.martinez@example.com">Email</a></li>
+                            <li><a href="https://linkedin.com/in/davidmartinez">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 David Tran. Built with HTML, CSS & JavaScript | Portfolio showcasing business website development</p>
+                </div>
             </div>
-            <div class="footer-line">&copy; 2025 Moocifur. All rights reserved.</div>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
