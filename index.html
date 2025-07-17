@@ -51,6 +51,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1) rotate(-5deg);
+            filter: drop-shadow(0 0 10px rgba(78, 205, 196, 0.5));
         }
 
         .nav-links {
@@ -380,6 +387,39 @@
         .skill-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover .skill-icon {
+            transform: scale(1.2) rotate(5deg);
+            color: #4ecdc4;
+            text-shadow: 0 0 20px rgba(78, 205, 196, 0.6);
+        }
+
+        /* Specific skill icon colors on hover */
+        .skill-card:hover .fa-react {
+            color: #61dafb;
+        }
+
+        .skill-card:hover .fa-node-js {
+            color: #339933;
+        }
+
+        .skill-card:hover .fa-js-square {
+            color: #f7df1e;
+        }
+
+        .skill-card:hover .fa-mobile-alt {
+            color: #ff6b6b;
+        }
+
+        .skill-card:hover .fa-git-alt {
+            color: #f05032;
+        }
+
+        .skill-card:hover .fa-puzzle-piece {
+            color: #4ecdc4;
         }
 
         /* Projects Section */
@@ -415,6 +455,12 @@
             justify-content: center;
             font-size: 4rem;
             color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.02);
         }
 
         .project-content {
@@ -452,15 +498,75 @@
             gap: 1rem;
         }
 
-        .project-link {
-            color: #4ecdc4;
+        .project-btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .project-btn:hover::before {
+            left: 100%;
+        }
+
+        .live-btn {
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+            color: white;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .live-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+            background: linear-gradient(45deg, #26c6da, #29b6f6);
+        }
+
+        .github-btn {
+            background: linear-gradient(45deg, #333333, #555555);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .github-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #24292e, #444444);
+        }
+
+        .project-btn i {
+            font-size: 1rem;
             transition: all 0.3s ease;
         }
 
-        .project-link:hover {
-            color: #ff6b6b;
+        .live-btn:hover i {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .github-btn:hover i {
+            transform: scale(1.2) rotate(10deg);
         }
 
         /* Contact Section */
@@ -842,7 +948,7 @@
 <body>
     <nav>
         <div class="container">
-            <div class="logo">DT</div>
+            <div class="logo" id="logo">DT</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -895,27 +1001,27 @@
                 </div>
                 <div class="skills">
                     <div class="skill-card">
-                        <div class="skill-icon">⚛️</div>
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
                         <h3>React</h3>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">🟢</div>
+                        <div class="skill-icon"><i class="fab fa-node-js"></i></div>
                         <h3>Node.js</h3>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">⚡</div>
+                        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
                         <h3>JavaScript</h3>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">📱</div>
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
                         <h3>Responsive Design</h3>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">🔄</div>
+                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
                         <h3>Git/GitHub</h3>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-icon">🧩</div>
+                        <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
                         <h3>Problem Solving</h3>
                     </div>
                 </div>
@@ -928,7 +1034,7 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" onclick="window.open('https://moocifur.github.io/lane-orthodontics', '_blank')">
                         <img src="assets/lane.jpeg" alt="Lane Orthodontics Website" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
@@ -941,14 +1047,20 @@
                             <span class="tech-tag">Form Integration</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://moocifur.github.io/lane-orthodontics" class="project-link">Live Demo</a>
-                            <a href="https://github.com/moocifur/lane-orthodontics" class="project-link">GitHub</a>
+                            <a href="https://moocifur.github.io/lane-orthodontics" target="_blank" class="project-btn live-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/moocifur/lane-orthodontics" target="_blank" class="project-btn github-btn">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" onclick="window.open('https://moocifur.github.io/barbook', '_blank')">
                         <img src="assets/bar.jpeg" alt="David's Barbook Application" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
@@ -961,14 +1073,20 @@
                             <span class="tech-tag">CSS Grid</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://moocifur.github.io/barbook" class="project-link">Live Demo</a>
-                            <a href="https://github.com/moocifur/barbook" class="project-link">GitHub</a>
+                            <a href="https://moocifur.github.io/barbook" target="_blank" class="project-btn live-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/moocifur/barbook" target="_blank" class="project-btn github-btn">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" onclick="window.open('https://moocifur.github.io/freestyle-wrestling/', '_blank')">
                         <img src="assets/freestyle.jpeg" alt="Mountain Freestyle Wrestling Website" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
@@ -981,14 +1099,20 @@
                             <span class="tech-tag">Form Handling</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://moocifur.github.io/freestyle-wrestling/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Moocifur/freestyle-wrestling" class="project-link">GitHub</a>
+                            <a href="https://moocifur.github.io/freestyle-wrestling/" target="_blank" class="project-btn live-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/Moocifur/freestyle-wrestling" target="_blank" class="project-btn github-btn">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
+                    <div class="project-image" onclick="window.open('https://moocifur.github.io/weather-app-one', '_blank')">
                         <img src="assets/weather.jpeg" alt="Weather Application" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
@@ -1001,8 +1125,14 @@
                             <span class="tech-tag">Responsive Design</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://moocifur.github.io/weather-app-one" class="project-link">Live Demo</a>
-                            <a href="https://github.com/moocifur/weather-app-one" class="project-link">GitHub</a>
+                            <a href="https://moocifur.github.io/weather-app-one" target="_blank" class="project-btn live-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/moocifur/weather-app-one" target="_blank" class="project-btn github-btn">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1037,16 +1167,16 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="mailto:davidkttran@gmail.com" class="social-link" title="Email">
+                        <a href="mailto:david@example.com" class="social-link" title="Email">
                             <i class="fas fa-envelope social-icon"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/david-tran-904086292" class="social-link" title="LinkedIn">
+                        <a href="#" class="social-link" title="LinkedIn">
                             <i class="fab fa-linkedin social-icon"></i>
                         </a>
-                        <a href="https://github.com/moocifur" class="social-link" title="GitHub">
+                        <a href="#" class="social-link" title="GitHub">
                             <i class="fab fa-github social-icon"></i>
                         </a>
-                        <a href="https://www.instagram.com/__chilledcow_/" class="social-link" title="Instagram">
+                        <a href="#" class="social-link" title="Instagram">
                             <i class="fab fa-instagram social-icon"></i>
                         </a>
                     </div>
@@ -1060,6 +1190,15 @@
     </div>
 
     <script>
+        // Logo click to scroll to top
+        const logo = document.getElementById('logo');
+        logo.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
         // Mobile menu toggle
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobile-menu');
