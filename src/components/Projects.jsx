@@ -42,8 +42,6 @@ const Projects = () => {
         }
     ];
 
-
-
     return (
         <section id="projects" className="py-20 bg-gray-900">
             <div className="container mx-auto px-4">
@@ -62,41 +60,30 @@ const Projects = () => {
                 {/* Projects Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
-                        <div key={project.id} className="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-700 transition-all duration-300 group hover:scale-105 hover:shadow-2xl">
+                        <div key={project.id} className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden hover:bg-zinc-700 transition-all duration-300 group hover:scale-105 hover:shadow-2xl">
                             
                             {/* Project Image */}
                             <div className="relative overflow-hidden">
-                                <img 
-                                    src={project.image} 
-                                    alt={project.title}
-                                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                                />
-                                
-
-
-                                {/* Overlay with links */}
-                                <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
-                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4">
-                                        {project.liveUrl && (
-                                            <a 
-                                                href={project.liveUrl}
-                                                className="p-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-colors"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <ExternalLink className="w-5 h-5 text-white" />
-                                            </a>
-                                        )}
-                                        <a 
-                                            href={project.githubUrl}
-                                            className="p-3 bg-gray-900 rounded-full hover:bg-black transition-colors"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <Github className="w-5 h-5 text-white" />
-                                        </a>
-                                    </div>
-                                </div>
+                                {project.liveUrl ? (
+                                    <a 
+                                        href={project.liveUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block cursor-pointer"
+                                    >
+                                        <img 
+                                            src={project.image} 
+                                            alt={project.title}
+                                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                        />
+                                    </a>
+                                ) : (
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title}
+                                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                    />
+                                )}
                             </div>
 
                             {/* Project Content */}
@@ -115,6 +102,30 @@ const Projects = () => {
                                     {project.description}
                                 </p>
 
+                                {/* Action Buttons */}
+                                <div className="flex space-x-3 mb-4">
+                                    {project.liveUrl && (
+                                        <a 
+                                            href={project.liveUrl}
+                                            className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <ExternalLink className="w-4 h-4 mr-2" />
+                                            Live Demo
+                                        </a>
+                                    )}
+                                    <a 
+                                        href={project.githubUrl}
+                                        className="flex items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Github className="w-4 h-4 mr-2" />
+                                        Code
+                                    </a>
+                                </div>
+
                                 {/* Technologies */}
                                 <div className="mb-4">
                                     <div className="flex flex-wrap gap-2">
@@ -131,20 +142,12 @@ const Projects = () => {
 
                                 {/* Features */}
                                 <div className="space-y-2">
-                                    {project.features.slice(0, 3).map((feature, idx) => (
+                                    {project.features.map((feature, idx) => (
                                         <div key={idx} className="flex items-center space-x-2">
                                             <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                                             <span className="text-sm text-gray-300">{feature}</span>
                                         </div>
                                     ))}
-                                    {project.features.length > 3 && (
-                                        <div className="flex items-center space-x-2">
-                                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                                            <span className="text-sm text-gray-400">
-                                                +{project.features.length - 3} more features
-                                            </span>
-                                        </div>
-                                    )}
                                 </div>
 
                             </div>
