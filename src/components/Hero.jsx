@@ -54,9 +54,9 @@ const Hero = () => {
 
     const DeviceMockup = ({ project }) => {
         return (
-            <div className="relative mx-auto w-96 h-96 flex items-center justify-center">
+            <div className="relative mx-auto w-full max-w-96 h-96 flex items-center justify-center px-4">
                 {project.device === 'mobile' ? (
-                    <div className="relative w-64 h-96">
+                    <div className="relative w-64 h-96 max-w-full">
                         {/* Phone Frame */}
                         <div className="absolute inset-0 bg-gray-800 rounded-[2.5rem] p-2 shadow-2xl">
                             <div className="w-full h-full bg-black rounded-[2rem] overflow-hidden relative">
@@ -72,8 +72,8 @@ const Hero = () => {
                         </div>
                     </div>
                 ) : (
-                    <div className="relative w-[420px] h-72">
-                        {/* Laptop Frame */}
+                    <div className="relative w-full max-w-[420px] h-72">
+                        {/* Laptop Frame - Responsive width */}
                         <div className="absolute inset-0 bg-gray-800 rounded-t-xl shadow-2xl p-3">
                             <div className="w-full h-60 bg-black rounded-lg overflow-hidden relative">
                                 {/* Screen Content */}
@@ -83,8 +83,8 @@ const Hero = () => {
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                            {/* Laptop Base */}
-                            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-[28rem] h-4 bg-gray-700 rounded-b-xl"></div>
+                            {/* Laptop Base - Responsive width */}
+                            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-[calc(100%+2rem)] max-w-[28rem] h-4 bg-gray-700 rounded-b-xl"></div>
                         </div>
                     </div>
                 )}
@@ -95,7 +95,7 @@ const Hero = () => {
     return (
         <section 
             id="home" 
-            className="relative py-20"
+            className="relative py-20 overflow-x-hidden"
             style={{
                 backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/hero-bg.jpg')",
                 backgroundSize: 'cover',
@@ -107,15 +107,15 @@ const Hero = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
 
                     {/* Left Side - Text Content */}
-                    <div>
+                    <div className="px-2">
                         {/* Headline */}
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
                             Turning <span className="text-blue-400">Ideas</span> into
                             <span className="text-blue-400"> Interactive</span> Reality
                         </h1>
 
                         {/* Description */}
-                        <p className="text-xl text-gray-300 mb-8">
+                        <p className="text-lg sm:text-xl text-gray-300 mb-8">
                             Every line of code I write has one goal: making someone's day better. From small business owners to everyday users, I create tools that remove friction and add value.
                         </p>
 
@@ -123,23 +123,23 @@ const Hero = () => {
                         <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4 mb-4">
 
                             {/* Services Button */}
-                            <a href="#projects" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center sm:flex-1 text-white">
+                            <a href="#projects" className="bg-blue-600 hover:bg-blue-700 px-6 sm:px-8 py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors text-center sm:flex-1 text-white">
                                 View Projects
                             </a>
 
                             {/* Shop Button */}
-                            <a href="#contact" className="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center sm:flex-1 flex items-center justify-center text-white">
+                            <a href="#contact" className="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 px-6 sm:px-8 py-4 rounded-lg font-semibold text-base sm:text-lg transition-all text-center sm:flex-1 flex items-center justify-center text-white">
                                 Get In Touch
                             </a>
                         </div>
                     </div>
 
                     {/* Right Side */}
-                    <div className="relative">
+                    <div className="relative px-2">
                         <div className="flex flex-col items-center">
                             {/* Project Info */}
                             <div className="text-center mb-6">
-                                <h3 className="text-2xl font-bold text-white mb-2">
+                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                                     {projects[currentProject].title}
                                 </h3>
                                 <span className="px-4 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">
@@ -148,7 +148,7 @@ const Hero = () => {
                             </div>
 
                             {/* Device Mockup */}
-                            <div className="relative mb-6 transition-all duration-500 ease-in-out">
+                            <div className="relative mb-6 transition-all duration-500 ease-in-out w-full">
                                 <DeviceMockup project={projects[currentProject]} />
                             </div>
 
