@@ -17,19 +17,19 @@ const Footer = () => {
         {
             icon: <Mail className="w-5 h-5" />,
             label: "Email",
-            href: "mailto:david@example.com",
+            href: "mailto:davidkttran@gmail.com",
             color: "hover:text-blue-400"
         },
         {
             icon: <Github className="w-5 h-5" />,
             label: "GitHub",
-            href: "https://github.com/yourusername",
+            href: "https://github.com/Moocifur",
             color: "hover:text-gray-300"
         },
         {
             icon: <Linkedin className="w-5 h-5" />,
             label: "LinkedIn",
-            href: "https://linkedin.com/in/yourprofile",
+            href: "https://linkedin.com/in/david-tran-904086292",
             color: "hover:text-blue-400"
         }
     ];
