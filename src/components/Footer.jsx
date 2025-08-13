@@ -138,10 +138,10 @@ const Footer = () => {
                                 <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                                 <span>Tailwind CSS</span>
                             </span>
-                            <span className="flex items-center space-x-1">
+                            {/* <span className="flex items-center space-x-1">
                                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                                 <span>Vercel</span>
-                            </span>
+                            </span> */}
                         </div>
                     </div>
                 </div>
