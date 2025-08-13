@@ -52,7 +52,7 @@ const Projects = () => {
                         Featured Projects
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        A collection of projects that showcase my skills in full-stack development, 
+                        A collection of projects that showcase my skills in development, 
                         from concept to deployment.
                     </p>
                 </div>
@@ -164,8 +164,7 @@ const Projects = () => {
                         href="#contact"
                         className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white"
                     >
-                        Let's Build Something Amazing
-                        <ExternalLink className="w-5 h-5 ml-2" />
+                        Get In Touch
                     </a>
                 </div>
 

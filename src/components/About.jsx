@@ -2,25 +2,17 @@ import React from 'react';
 import { Code, Palette, Zap, Coffee, MapPin, Heart, Lightbulb } from 'lucide-react';
 
 const About = () => {
-    const skills = [
-        {
-            category: "Frontend",
-            icon: <Palette className="w-6 h-6" />,
-            technologies: ["React", "JavaScript", "HTML/CSS", "Tailwind CSS"],
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            category: "Backend", 
-            icon: <Code className="w-6 h-6" />,
-            technologies: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
-            color: "from-green-500 to-teal-500"
-        },
-        {
-            category: "Tools",
-            icon: <Zap className="w-6 h-6" />,
-            technologies: ["Git", "VS Code", "Figma", "Vercel"],
-            color: "from-purple-500 to-pink-500"
-        }
+    const technologies = [
+        "React",
+        "JavaScript", 
+        "HTML/CSS",
+        "Tailwind CSS",
+        "GitHub",
+        "VS Code",
+        "Vite",
+        "API",
+        "ArcGIS",
+        "NPM"
     ];
 
     return (
@@ -44,7 +36,7 @@ const About = () => {
                     <div className="space-y-6">
                         <div className="relative">
                             {/* Profile Image Placeholder */}
-                            <div className="w-64 h-64 mx-auto lg:mx-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                            <div className="w-64 h-64 mx-auto bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                                 <img 
                                     src="/me.jpeg" 
                                     alt="David Thompson - Web Developer"
@@ -73,48 +65,29 @@ const About = () => {
                                 design trends, and working on personal projects that challenge me to grow.
                             </p>
                         </div>
-
-                        {/* Quick Info */}
-                        <div className="grid grid-cols-2 gap-4 pt-6">
-                            <div className="flex items-center space-x-3 text-gray-300">
-                                <MapPin className="w-5 h-5 text-blue-400" />
-                                <span>San Bernardino, CA</span>
-                            </div>
-                            <div className="flex items-center space-x-3 text-gray-300">
-                                <Coffee className="w-5 h-5 text-blue-400" />
-                                <span>Always Learning</span>
-                            </div>
-                        </div>
                     </div>
 
-                    {/* Right Side - Skills */}
-                    <div>
-                        <h3 className="text-2xl font-bold text-white mb-8">Skills & Technologies</h3>
+                    {/* Right Side - Skills & Technologies */}
+                    <div className="space-y-8">
+                        <div>
+                            <h3 className="text-2xl font-bold text-white mb-2">Skills & Technologies</h3>
+                            <p className="text-gray-400 mb-8">The tools and languages I use to bring ideas to life</p>
+                        </div>
                         
-                        <div className="space-y-6">
-                            {skills.map((skill, index) => (
-                                <div key={index} className="bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-colors group">
-                                    <div className="flex items-center mb-4">
-                                        <div className={`p-3 rounded-lg bg-gradient-to-r ${skill.color} mr-4 group-hover:scale-110 transition-transform`}>
-                                            <div className="text-white">
-                                                {skill.icon}
-                                            </div>
+                        {/* Skills Grid */}
+                        <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                {technologies.map((tech, index) => (
+                                    <div 
+                                        key={index}
+                                        className="bg-gray-800/70 hover:bg-gray-700/70 rounded-xl p-4 transition-all duration-300 hover:scale-105 cursor-default border border-gray-600/30 hover:border-blue-500/50"
+                                    >
+                                        <div className="flex items-center justify-center text-center">
+                                            <span className="text-gray-200 font-medium text-sm leading-tight">{tech}</span>
                                         </div>
-                                        <h4 className="text-xl font-semibold text-white">{skill.category}</h4>
                                     </div>
-                                    
-                                    <div className="flex flex-wrap gap-2">
-                                        {skill.technologies.map((tech, techIndex) => (
-                                            <span 
-                                                key={techIndex}
-                                                className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm font-medium hover:bg-gray-600 transition-colors"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -164,20 +137,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Simple Call to Action */}
-                <div className="text-center mt-16">
-                    <p className="text-gray-400 mb-6 text-lg">
-                        Interested in working together?
-                    </p>
-                    <a 
-                        href="#contact"
-                        className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white hover:scale-105"
-                    >
-                        Get In Touch
-                    </a>
-                </div>
-
             </div>
         </section>
     );

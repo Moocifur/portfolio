@@ -110,8 +110,10 @@ const Hero = () => {
                     <div className="px-2">
                         {/* Headline */}
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
-                            Turning <span className="text-blue-400">Ideas</span> into
-                            <span className="text-blue-400"> Interactive</span> Reality
+                            Creating <span className="text-blue-400">Solutions</span> that
+                            <span className="text-blue-400"> Improve</span> Lives
+
+                        
                         </h1>
 
                         {/* Description */}
