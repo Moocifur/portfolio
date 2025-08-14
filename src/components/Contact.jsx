@@ -1,38 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, Send, Github, Linkedin, User, FileText } from 'lucide-react';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null);
-
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitStatus('success');
-            setFormData({ name: '', email: '', subject: '', message: '' });
-            
-            // Clear success message after 5 seconds
-            setTimeout(() => setSubmitStatus(null), 5000);
-        }, 1500);
-    };
-
     const socialLinks = [
         {
             icon: <Mail className="w-6 h-6" />,
@@ -76,31 +45,23 @@ const Contact = () => {
                     <div className="bg-gray-800 rounded-xl p-8 mb-12">
                         <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
                         
-                        {submitStatus === 'success' && (
-                            <div className="mb-6 p-4 bg-green-600/20 border border-green-600/30 rounded-lg">
-                                <p className="text-green-400 font-medium">
-                                    Thanks for your message! I'll get back to you soon.
-                                </p>
-                            </div>
-                        )}
-
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        {/* Simple HTML Form */}
+                        <div className="space-y-6">
                             {/* Name Field */}
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                                     Your Name
                                 </label>
                                 <div className="relative">
-                                    <User className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                                    <User className="absolute left-3 top-3 w-5 h-5 text-gray-400 pointer-events-none z-10" />
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
                                         required
                                         className="w-full pl-12 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all"
                                         placeholder="Enter your name"
+                                        form="contact-form"
                                     />
                                 </div>
                             </div>
@@ -111,16 +72,15 @@ const Contact = () => {
                                     Email Address
                                 </label>
                                 <div className="relative">
-                                    <Mail className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                                    <Mail className="absolute left-3 top-3 w-5 h-5 text-gray-400 pointer-events-none z-10" />
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
                                         required
                                         className="w-full pl-12 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all"
                                         placeholder="your@email.com"
+                                        form="contact-form"
                                     />
                                 </div>
                             </div>
@@ -131,16 +91,15 @@ const Contact = () => {
                                     Subject
                                 </label>
                                 <div className="relative">
-                                    <FileText className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                                    <FileText className="absolute left-3 top-3 w-5 h-5 text-gray-400 pointer-events-none z-10" />
                                     <input
                                         type="text"
                                         id="subject"
                                         name="subject"
-                                        value={formData.subject}
-                                        onChange={handleChange}
                                         required
                                         className="w-full pl-12 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all"
                                         placeholder="What's this about?"
+                                        form="contact-form"
                                     />
                                 </div>
                             </div>
@@ -153,34 +112,36 @@ const Contact = () => {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
                                     required
                                     rows={5}
                                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all resize-none"
                                     placeholder="Tell me about your project or just say hello..."
+                                    form="contact-form"
                                 ></textarea>
                             </div>
 
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                disabled={isSubmitting}
-                                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-600 disabled:to-gray-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white flex items-center justify-center space-x-2 hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
+                                form="contact-form"
+                                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white flex items-center justify-center space-x-2 hover:scale-105"
                             >
-                                {isSubmitting ? (
-                                    <>
-                                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                        <span>Sending...</span>
-                                    </>
-                                ) : (
-                                    <>
-                                        <Send className="w-5 h-5" />
-                                        <span>Send Message</span>
-                                    </>
-                                )}
+                                <Send className="w-5 h-5" />
+                                <span>Send Message</span>
                             </button>
-                        </form>
+                        </div>
+
+                        {/* Hidden form for Formspree */}
+                        <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                            <form 
+                                id="contact-form"
+                                action="https://formspree.io/f/xpwrgvyq" 
+                                method="POST"
+                            >
+                                {/* Hidden honeypot field for spam protection */}
+                                <input type="text" name="_gotcha" style={{ display: 'none' }} />
+                            </form>
+                        </div>
                     </div>
 
                     {/* Social Icons - Centered Below Form */}
