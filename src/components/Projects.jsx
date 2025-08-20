@@ -24,7 +24,7 @@ const Projects = () => {
             category: "web",
             technologies: ["React", "Vite", "Tailwind", "Lucide React"],
             features: ["Responsive Mobile Design", "Contact Form with Validation", "Interactive Testimonials", "Google Maps Integration"],
-            liveUrl: "https://diesel-injection.netlify.app",
+            liveUrl: "https://dieselinjectionservice.com/",
             githubUrl: "https://github.com/Moocifur/diesel-injection-service",
             icon: <Code className="w-6 h-6" />,
         },
