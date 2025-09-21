@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Monitor, Smartphone, Globe, Code, Database, Zap } from 'lucide-react';
+import { ExternalLink, Github, Monitor, Smartphone, Globe, Code, Database, Zap, Heart } from 'lucide-react';
 
 const Projects = () => {
 
@@ -45,7 +45,49 @@ const Projects = () => {
             liveUrl: "https://moocifur.github.io/barbook/",
             githubUrl: "https://github.com/Moocifur/barbook",
             icon: <Database className="w-6 h-6" />,
-        }
+        },
+        {
+            id: 4,
+            title: "RollxWithxIt Therapy",
+            description: "Built a calming, accessible therapy website that makes mental health services approachable for men and clients seeking a relaxed therapeutic experience.",
+            image: "/rollwithit.png", 
+            category: "web",
+            clientType: "Mental Health Practice",
+            businessValue: "Created a welcoming digital presence that reduces barriers to seeking therapy",
+            technologies: ["React", "Vite", "CSS Modules", "Lucide React", "Accessibility"],
+            results: ["User-Friendly Design", "Accessibility Compliant", "Mobile-Responsive", "Professional Credibility"],
+            liveUrl: "https://roll-with-xit.netlify.app//", 
+            githubUrl: "https://github.com/Moocifur/rollxwithxit", 
+            icon: <Heart className="w-6 h-6" />, 
+        },
+        {
+            id: 5,
+            title: "Mountain Freestyle Wrestling Club",
+            description: "Created a dynamic website for an elite youth wrestling program that showcases Olympic-level training methodology and North Caucasus wrestling heritage.",
+            image: "/wrestling.png", 
+            category: "web",
+            clientType: "Athletic Training Program",
+            businessValue: "Established credible online presence for elite wrestling program attracting serious young athletes",
+            technologies: ["React", "Vite", "Tailwind CSS v4", "Framer Motion", "Lucide React"],
+            results: ["Animated User Experience", "Olympic Credibility Established", "Professional Sports Branding", "Mobile-Optimized Performance"],
+            liveUrl: "https://freestylewrestling.netlify.app/", 
+            githubUrl: "https://github.com/Moocifur/freestyle-wrestling", 
+            icon: <Zap className="w-6 h-6" />, 
+        },
+        {
+            id: 6,
+            title: "React Shopping Cart App",
+            description: "Built a fully functional e-commerce shopping cart application with product browsing, cart management, and responsive design using modern React patterns.",
+            image: "/shopping.png",
+            category: "web",
+            clientType: "E-commerce Application",
+            businessValue: "Demonstrated modern React development skills with real-world shopping functionality",
+            technologies: ["React", "React Router", "Vite", "CSS Modules", "Fake Store API"],
+            results: ["Complete Shopping Experience", "Custom React Hooks", "Responsive Design", "API Integration"],
+            liveUrl: "https://daves-shopping-cart.netlify.app/", 
+            githubUrl: "https://github.com/Moocifur/react-shopping-cart", 
+            icon: <Globe className="w-6 h-6" />,
+        },
     ];
 
     return (
@@ -176,7 +218,7 @@ const Projects = () => {
 
                 {/* Call to Action */}
                 <div className="text-center mt-16">
-                    <p className="text-gray-400 mb-6">
+                    <p className="text-gray-400 mb-6 text-lg">
                         Ready to grow your business online?
                     </p>
                     <a 
