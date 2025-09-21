@@ -6,28 +6,24 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "Lane Orthodontics",
-            description: "Built a professional website that makes it easy for patients to find information and book appointments at both office locations.",
+            title: "Orthodontics Website",
+            description: "Professional orthodontic practice website with dual-location theming, mobile navigation, and integrated booking system.",
             image: "/lane.jpeg",
             category: "web",
-            clientType: "Healthcare Practice",
-            businessValue: "Streamlined patient booking and improved online presence across two locations",
             technologies: ["HTML", "CSS", "JavaScript", "JotForm"],
-            results: ["Easy Online Booking", "Mobile-Friendly Design", "Location-Specific Information", "Professional Brand Presence"],
+            features: ["Location-Based Theming", "Mobile-First Navigation", "Interactive Image Carousel", "Integrated Booking Forms"],
             liveUrl: "https://laneorthodontics.com/",
             githubUrl: "https://github.com/Moocifur/lane-orthodontics",
             icon: <Monitor className="w-6 h-6" />,
         },
         {
             id: 2,
-            title: "Diesel Injection Service",
-            description: "Created a modern website that helps customers easily find services, read testimonials, and contact the business.",
+            title: "Diesel Injection Service Website",
+            description: "Modern React business website for a diesel injection service company with responsive design, interactive components, and professional UI.",
             image: "/diesel-long.png", 
             category: "web",
-            clientType: "Automotive Service",
-            businessValue: "Enhanced credibility and made it easier for customers to get in touch",
             technologies: ["React", "Vite", "Tailwind", "Lucide React"],
-            results: ["Professional Online Presence", "Easy Contact Process", "Customer Testimonials Display", "Mobile-Optimized Experience"],
+            features: ["Responsive Mobile Design", "Contact Form with Validation", "Interactive Testimonials", "Google Maps Integration"],
             liveUrl: "https://dieselinjectionservice.com/",
             githubUrl: "https://github.com/Moocifur/diesel-injection-service",
             icon: <Code className="w-6 h-6" />,
@@ -35,13 +31,11 @@ const Projects = () => {
         {
             id: 3,
             title: "David's Barbook",
-            description: "Developed an interactive cocktail database that helps bartenders and enthusiasts quickly find and save their favorite recipes.",
+            description: "Interactive cocktail recipe database with advanced search functionality, favorites system, and responsive design. Built with vanilla JavaScript and modern web development practices.",
             image: "/barbookfull.jpeg",
             category: "web",
-            clientType: "Hospitality Tool",
-            businessValue: "Improved efficiency and customer service for bartending professionals",
             technologies: ["Javascript", "HTML", "CSS", "Webpack"],
-            results: ["Quick Recipe Search", "Save Favorite Drinks", "Works on Any Device", "Fast Performance"],
+            features: ["Advanced Search & Filtering", "Favorites Management System", "Responsive Card-Based UI", "Local Storage Persistence"],
             liveUrl: "https://moocifur.github.io/barbook/",
             githubUrl: "https://github.com/Moocifur/barbook",
             icon: <Database className="w-6 h-6" />,
@@ -55,10 +49,11 @@ const Projects = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                        Recent Work
+                        Recent Client Work
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Real businesses achieving real results. See how I've helped companies improve their online presence and grow their customer base.
+                        A collection of projects that showcase my skills in development, 
+                        from concept to deployment.
                     </p>
                 </div>
 
@@ -94,11 +89,6 @@ const Projects = () => {
                             {/* Project Content */}
                             <div className="p-6">
                                 
-                                {/* Client Type Badge */}
-                                <div className="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full mb-3">
-                                    {project.clientType}
-                                </div>
-
                                 {/* Title & Icon */}
                                 <div className="flex items-center mb-3">
                                     <div className="text-blue-400 mr-3 group-hover:scale-110 transition-transform">
@@ -112,12 +102,6 @@ const Projects = () => {
                                     {project.description}
                                 </p>
 
-                                {/* Business Value */}
-                                <div className="mb-4 p-3 bg-gray-700 rounded-lg">
-                                    <h4 className="text-green-400 text-xs font-semibold mb-1 uppercase tracking-wide">Impact</h4>
-                                    <p className="text-gray-200 text-sm">{project.businessValue}</p>
-                                </div>
-
                                 {/* Action Buttons */}
                                 <div className="flex space-x-3 mb-4">
                                     {project.liveUrl && (
@@ -128,7 +112,7 @@ const Projects = () => {
                                             rel="noopener noreferrer"
                                         >
                                             <ExternalLink className="w-4 h-4 mr-2" />
-                                            View Live
+                                            Live Demo
                                         </a>
                                     )}
                                     <a 
@@ -142,31 +126,28 @@ const Projects = () => {
                                     </a>
                                 </div>
 
-                                {/* Results */}
+                                {/* Technologies */}
                                 <div className="mb-4">
-                                    <h4 className="text-white text-sm font-semibold mb-2">Key Results</h4>
-                                    <div className="space-y-2">
-                                        {project.results.map((result, idx) => (
-                                            <div key={idx} className="flex items-center space-x-2">
-                                                <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                                                <span className="text-sm text-gray-300">{result}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Technologies (smaller, less prominent) */}
-                                <div className="border-t border-gray-600 pt-3">
                                     <div className="flex flex-wrap gap-2">
                                         {project.technologies.map((tech, idx) => (
                                             <span 
                                                 key={idx}
-                                                className="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs"
+                                                className="px-3 py-1 bg-gray-700 text-blue-300 rounded-full text-xs font-medium"
                                             >
                                                 {tech}
                                             </span>
                                         ))}
                                     </div>
+                                </div>
+
+                                {/* Features */}
+                                <div className="space-y-2">
+                                    {project.features.map((feature, idx) => (
+                                        <div key={idx} className="flex items-center space-x-2">
+                                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                                            <span className="text-sm text-gray-300">{feature}</span>
+                                        </div>
+                                    ))}
                                 </div>
 
                             </div>
@@ -177,7 +158,7 @@ const Projects = () => {
                 {/* Call to Action */}
                 <div className="text-center mt-16">
                     <p className="text-gray-400 mb-6">
-                        Ready to grow your business online?
+                        Interested in working together?
                     </p>
                     <a 
                         href="#contact"
