@@ -63,7 +63,7 @@ const Services = () => {
                 <div className="grid lg:grid-cols-2 gap-12 mb-16">
                     
                     {/* Freelance Services */}
-                    <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+                    <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8">
                         
                         {/* Header with Icon */}
                         <div className="text-center mb-8">
@@ -141,7 +141,7 @@ const Services = () => {
                     </div>
 
                     {/* Employment/Collaboration Services */}
-                    <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+                    <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8">
                         
                         {/* Header with Icon */}
                         <div className="text-center mb-8">
