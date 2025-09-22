@@ -155,44 +155,45 @@ const Hero = () => {
             <div className="container mx-auto px-6 lg:px-8 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
 
-                    {/* Left Side - Business-Focused Content */}
+                    {/* Left Side - More Balanced Content */}
                     <div className="space-y-8">
 
-                        {/* Main Headline - Improved typography */}
+                        {/* Updated Main Headline */}
                         <div className="space-y-6">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-[1.1] tracking-tight" 
                                 style={{ letterSpacing: '-0.025em', lineHeight: '1.1' }}>
-                                Frontend Developer Building Web Solutions That{' '}
+                                Frontend Developer &{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                                    Drive Results
+                                    Problem Solver
                                 </span>
                             </h1>
                             
                             <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl" 
                                style={{ lineHeight: '1.6' }}>
-                                Developing responsive websites with clean code, optimized performance, and user-focused design that delivers measurable business impact.
+                                Building responsive web applications with clean code and user-focused design. 
+                                Available for full-time opportunities and freelance projects.
                             </p>
                         </div>
 
-                        {/* Value Proposition */}
+                        {/* Updated Value Proposition - More Technical */}
                         <div className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-2xl p-6 space-y-4">
-                            <h3 className="text-lg font-medium text-white" style={{ lineHeight: '1.4' }}>What You Get:</h3>
+                            <h3 className="text-lg font-medium text-white" style={{ lineHeight: '1.4' }}>Technical Focus:</h3>
                             <div className="grid sm:grid-cols-2 gap-3 text-slate-300">
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>Mobile-friendly design</span>
+                                    <span style={{ lineHeight: '1.5' }}>React & Modern JavaScript</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>Google optimization</span>
+                                    <span style={{ lineHeight: '1.5' }}>Responsive Design</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>Contact forms that work</span>
+                                    <span style={{ lineHeight: '1.5' }}>Performance Optimization</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>Ongoing support included</span>
+                                    <span style={{ lineHeight: '1.5' }}>Clean, Maintainable Code</span>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +224,7 @@ const Hero = () => {
                             <div className="text-center space-y-4">
                                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
                                     <Star className="w-4 h-4 text-emerald-400" />
-                                    <span className="text-emerald-400 font-medium text-sm">Client Success</span>
+                                    <span className="text-emerald-400 font-medium text-sm">Featured Project</span>
                                 </div>
                                 
                                 <div>

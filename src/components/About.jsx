@@ -1,21 +1,38 @@
 import React, { useState } from 'react';
-import { Code, Palette, Zap, Coffee, MapPin, Heart, Lightbulb, Globe, Database, Settings, Wrench, FileCode, Package, Cpu, Map } from 'lucide-react';
+import { Heart, Lightbulb, Code } from 'lucide-react';
+// React Icons imports for tech logos
+import { 
+    FaReact, 
+    FaJs, 
+    FaHtml5, 
+    FaCss3Alt, 
+    FaGithub 
+} from 'react-icons/fa';
+import { 
+    SiTailwindcss, 
+    SiWebpack, 
+    SiVite, 
+    SiFramer,
+    SiReactrouter
+} from 'react-icons/si';
+import { MdApi } from 'react-icons/md';
 
 const About = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
-    // Technologies with appropriate icons
+    // Technologies with actual brand icons
     const technologies = [
-        { name: "React", icon: <Code className="w-5 h-5" />, color: "text-blue-400" },
-        { name: "JavaScript", icon: <FileCode className="w-5 h-5" />, color: "text-yellow-400" },
-        { name: "HTML/CSS", icon: <Globe className="w-5 h-5" />, color: "text-orange-400" },
-        { name: "Tailwind CSS", icon: <Palette className="w-5 h-5" />, color: "text-cyan-400" },
-        { name: "GitHub", icon: <Package className="w-5 h-5" />, color: "text-gray-400" },
-        { name: "VS Code", icon: <Settings className="w-5 h-5" />, color: "text-blue-500" },
-        { name: "Vite", icon: <Zap className="w-5 h-5" />, color: "text-purple-400" },
-        { name: "API", icon: <Database className="w-5 h-5" />, color: "text-green-400" },
-        { name: "ArcGIS", icon: <Map className="w-5 h-5" />, color: "text-emerald-400" },
-        { name: "NPM", icon: <Cpu className="w-5 h-5" />, color: "text-red-400" }
+        { name: "React", icon: <FaReact className="w-5 h-5" />, color: "text-blue-400" },
+        { name: "JavaScript ES6+", icon: <FaJs className="w-5 h-5" />, color: "text-yellow-400" },
+        { name: "HTML5", icon: <FaHtml5 className="w-5 h-5" />, color: "text-orange-400" },
+        { name: "CSS3", icon: <FaCss3Alt className="w-5 h-5" />, color: "text-blue-500" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5" />, color: "text-cyan-400" },
+        { name: "React Router", icon: <SiReactrouter className="w-5 h-5" />, color: "text-red-400" },
+        { name: "Webpack", icon: <SiWebpack className="w-5 h-5" />, color: "text-blue-600" },
+        { name: "Vite", icon: <SiVite className="w-5 h-5" />, color: "text-purple-400" },
+        { name: "API Integration", icon: <MdApi className="w-5 h-5" />, color: "text-green-400" },
+        { name: "Framer Motion", icon: <SiFramer className="w-5 h-5" />, color: "text-pink-400" },
+        { name: "GitHub", icon: <FaGithub className="w-5 h-5" />, color: "text-gray-400" }
     ];
 
     return (
@@ -70,12 +87,15 @@ const About = () => {
                             </p>
                             <p>
                                 I focus on writing clean, maintainable code and creating user experiences 
-                                that are both functional and enjoyable. Every project is an opportunity 
-                                to learn something new and improve my craft.
+                                that are both functional and enjoyable. Whether working with a development 
+                                team or helping a business establish their online presence, I prioritize 
+                                scalable solutions and intuitive design.
                             </p>
                             <p>
-                                When I'm not coding, I enjoy exploring new technologies, reading about 
-                                design trends, and working on personal projects that challenge me to grow.
+                                I enjoy collaborating with teams and clients alike, whether that's contributing 
+                                to a larger codebase, mentoring junior developers, or helping a small business 
+                                launch their first website. Every project is an opportunity to learn something 
+                                new and improve my craft.
                             </p>
                         </div>
                     </div>
@@ -85,14 +105,14 @@ const About = () => {
                         <div>
                             <h3 className="text-2xl font-medium text-white mb-2" 
                                 style={{ letterSpacing: '-0.025em', lineHeight: '1.3' }}>
-                                Skills & Technologies
+                                Technical Skills
                             </h3>
                             <p className="text-gray-400 mb-8" style={{ lineHeight: '1.6' }}>
-                                The tools and languages I use to bring ideas to life
+                                The tools and technologies I use to build modern web applications
                             </p>
                         </div>
                         
-                        {/* Enhanced Skills Grid with Icons */}
+                        {/* Enhanced Skills Grid with Brand Icons */}
                         <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
                             <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
                                 {technologies.map((tech, index) => (
@@ -113,14 +133,33 @@ const About = () => {
                                 ))}
                             </div>
                         </div>
+
+                        {/* Currently Learning Section */}
+                        <div className="bg-gray-900/30 rounded-xl p-6 border border-gray-700/30">
+                            <h4 className="text-lg font-medium text-white mb-3" 
+                                style={{ lineHeight: '1.3' }}>
+                                Currently Exploring
+                            </h4>
+                            <div className="flex flex-wrap gap-3">
+                                <span className="px-3 py-2 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30">
+                                    Next.js
+                                </span>
+                                <span className="px-3 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm border border-green-500/30">
+                                    Node.js
+                                </span>
+                                <span className="px-3 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm border border-blue-500/30">
+                                    TypeScript
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                {/* What I Believe In */}
+                {/* My Development Philosophy */}
                 <div>
                     <h3 className="text-3xl font-medium text-white text-center mb-12" 
                         style={{ letterSpacing: '-0.025em', lineHeight: '1.2' }}>
-                        What I Focus On
+                        My Development Philosophy
                     </h3>
                     
                     <div className="grid md:grid-cols-3 gap-8">
@@ -131,11 +170,12 @@ const About = () => {
                                 </div>
                                 <h4 className="text-xl font-medium text-white mb-4" 
                                     style={{ lineHeight: '1.3' }}>
-                                    User-First Design
+                                    User-Centered Design
                                 </h4>
                                 <p className="text-gray-400" style={{ lineHeight: '1.7' }}>
-                                    I believe great websites should be intuitive and accessible. 
-                                    Every design decision starts with the user experience.
+                                    I believe great applications should be intuitive and accessible. 
+                                    Every design decision starts with understanding user needs and creating 
+                                    seamless experiences.
                                 </p>
                             </div>
                         </div>
@@ -147,11 +187,12 @@ const About = () => {
                                 </div>
                                 <h4 className="text-xl font-medium text-white mb-4" 
                                     style={{ lineHeight: '1.3' }}>
-                                    Clean Code
+                                    Clean Architecture
                                 </h4>
                                 <p className="text-gray-400" style={{ lineHeight: '1.7' }}>
-                                    I write code that's easy to read, maintain, and scale. 
-                                    Simple solutions often work best.
+                                    I write code that's easy to read, test, and maintain. 
+                                    Well-structured applications with clear patterns make 
+                                    collaboration easier and bugs less likely.
                                 </p>
                             </div>
                         </div>
@@ -163,11 +204,12 @@ const About = () => {
                                 </div>
                                 <h4 className="text-xl font-medium text-white mb-4" 
                                     style={{ lineHeight: '1.3' }}>
-                                    Problem Solving
+                                    Continuous Learning
                                 </h4>
                                 <p className="text-gray-400" style={{ lineHeight: '1.7' }}>
-                                    I enjoy breaking down complex challenges into manageable pieces 
-                                    and finding creative solutions that work.
+                                    Technology evolves rapidly, and I stay current with modern practices. 
+                                    I enjoy exploring new tools and techniques that can improve 
+                                    development efficiency and user experience.
                                 </p>
                             </div>
                         </div>
