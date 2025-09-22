@@ -263,14 +263,14 @@ const Projects = () => {
                 {/* Call to Action */}
                 <div className="text-center mt-16">
                     <p className="text-gray-400 mb-6 text-lg" style={{ lineHeight: '1.6' }}>
-                        Ready to grow your business online?
+                        Looking for a developer or have a project in mind?
                     </p>
                     <a 
                         href="#contact"
                         className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-medium text-lg transition-all text-white"
                         style={{ lineHeight: '1.4' }}
                     >
-                        Get In Touch
+                        Let's Talk
                     </a>
                 </div>
 

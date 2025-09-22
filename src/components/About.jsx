@@ -49,7 +49,7 @@ const About = () => {
                                 
                                 <img 
                                     src="/me.jpeg" 
-                                    alt="David Thompson - Web Developer"
+                                    alt="David Tran - Web Developer"
                                     className={`w-56 h-56 object-cover rounded-xl transition-opacity duration-300 ${
                                         imageLoaded ? 'opacity-100' : 'opacity-0'
                                     }`}

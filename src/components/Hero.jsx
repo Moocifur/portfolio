@@ -162,15 +162,15 @@ const Hero = () => {
                         <div className="space-y-6">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-[1.1] tracking-tight" 
                                 style={{ letterSpacing: '-0.025em', lineHeight: '1.1' }}>
-                                Professional Websites That{' '}
+                                Frontend Developer Building Web Solutions That{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                                    Get Results
+                                    Drive Results
                                 </span>
                             </h1>
                             
                             <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl" 
                                style={{ lineHeight: '1.6' }}>
-                                Professional websites that work on all devices, rank well on Google, and turn visitors into paying customers.
+                                Developing responsive websites with clean code, optimized performance, and user-focused design that delivers measurable business impact.
                             </p>
                         </div>
 
@@ -204,14 +204,14 @@ const Hero = () => {
                                 className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 rounded-xl font-medium text-lg text-white transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25"
                                 style={{ lineHeight: '1.4' }}
                             >
-                                Contact
+                                Let's Connect
                             </a>
                             <a 
                                 href="#projects" 
                                 className="inline-flex items-center justify-center border-2 border-slate-600 hover:border-slate-500 px-8 py-4 rounded-xl font-medium text-lg text-white transition-all duration-300 hover:bg-slate-800/50"
                                 style={{ lineHeight: '1.4' }}
                             >
-                                See My Work
+                                View Projects
                             </a>
                         </div>
                     </div>

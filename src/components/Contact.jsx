@@ -33,8 +33,7 @@ const Contact = () => {
                         Get In Touch
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Have a project in mind or just want to chat? I'd love to hear from you. 
-                        Let's build something amazing together.
+                        Have a project in mind, exploring opportunities, or just want to connect?
                     </p>
                 </div>
 
