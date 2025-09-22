@@ -16,17 +16,19 @@ import {
     SiReactrouter
 } from 'react-icons/si';
 import { MdApi } from 'react-icons/md';
+import { IoSparkles } from 'react-icons/io5';
 
 const About = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     // Technologies with actual brand icons
     const technologies = [
-        { name: "React", icon: <FaReact className="w-5 h-5" />, color: "text-blue-400" },
-        { name: "JavaScript ES6+", icon: <FaJs className="w-5 h-5" />, color: "text-yellow-400" },
         { name: "HTML5", icon: <FaHtml5 className="w-5 h-5" />, color: "text-orange-400" },
         { name: "CSS3", icon: <FaCss3Alt className="w-5 h-5" />, color: "text-blue-500" },
+        { name: "JavaScript ES6+", icon: <FaJs className="w-5 h-5" />, color: "text-yellow-400" },
+        { name: "React", icon: <FaReact className="w-5 h-5" />, color: "text-blue-400" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5" />, color: "text-cyan-400" },
+        { name: "AI Development (Claude)", icon: <IoSparkles className="w-5 h-5" />, color: "text-orange-400" },
         { name: "React Router", icon: <SiReactrouter className="w-5 h-5" />, color: "text-red-400" },
         { name: "Webpack", icon: <SiWebpack className="w-5 h-5" />, color: "text-blue-600" },
         { name: "Vite", icon: <SiVite className="w-5 h-5" />, color: "text-purple-400" },
