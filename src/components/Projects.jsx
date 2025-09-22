@@ -1,7 +1,12 @@
-import React from 'react';
-import { ExternalLink, Github, Monitor, Smartphone, Globe, Code, Database, Zap, Heart } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Github, Monitor, Smartphone, Globe, Code, Database, Zap, Heart, Check } from 'lucide-react';
 
 const Projects = () => {
+    const [imageLoaded, setImageLoaded] = useState({});
+
+    const handleImageLoad = (projectId) => {
+        setImageLoaded(prev => ({ ...prev, [projectId]: true }));
+    };
 
     const projects = [
         {
@@ -96,134 +101,174 @@ const Projects = () => {
                 
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                    <h2 className="text-4xl md:text-5xl font-medium mb-4 text-white" 
+                        style={{ letterSpacing: '-0.025em', lineHeight: '1.1' }}>
                         Recent Work
                     </h2>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-3xl mx-auto" 
+                       style={{ lineHeight: '1.6' }}>
                         Real businesses achieving real results. See how I've helped companies improve their online presence and grow their customer base.
                     </p>
                 </div>
 
                 {/* Projects Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project) => (
-                        <div key={project.id} className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden hover:bg-zinc-700 transition-all duration-300 group hover:scale-105 hover:shadow-2xl">
-                            
-                            {/* Project Image */}
-                            <div className="relative overflow-hidden">
-                                {project.liveUrl ? (
-                                    <a 
-                                        href={project.liveUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="block cursor-pointer"
-                                    >
+                    {projects.map((project) => {
+                        const isLoaded = imageLoaded[project.id];
+                        
+                        return (
+                            <div key={project.id} className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden hover:bg-zinc-700 transition-all duration-300 group hover:scale-105 hover:shadow-2xl">
+                                
+                                {/* Project Image with Skeleton Loader */}
+                                <div className="relative overflow-hidden h-48">
+                                    {/* Skeleton loader */}
+                                    {!isLoaded && (
+                                        <div className="absolute inset-0 bg-zinc-700 animate-pulse">
+                                            <div className="flex items-center justify-center h-full">
+                                                <div className="w-16 h-16 bg-zinc-600 rounded-lg"></div>
+                                            </div>
+                                        </div>
+                                    )}
+                                    
+                                    {project.liveUrl ? (
+                                        <a 
+                                            href={project.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block cursor-pointer"
+                                        >
+                                            <img 
+                                                src={project.image} 
+                                                alt={project.title}
+                                                className={`w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 ${
+                                                    isLoaded ? 'opacity-100' : 'opacity-0'
+                                                }`}
+                                                onLoad={() => handleImageLoad(project.id)}
+                                            />
+                                        </a>
+                                    ) : (
                                         <img 
                                             src={project.image} 
                                             alt={project.title}
-                                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                            className={`w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 ${
+                                                isLoaded ? 'opacity-100' : 'opacity-0'
+                                            }`}
+                                            onLoad={() => handleImageLoad(project.id)}
                                         />
-                                    </a>
-                                ) : (
-                                    <img 
-                                        src={project.image} 
-                                        alt={project.title}
-                                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                                    />
-                                )}
-                            </div>
-
-                            {/* Project Content */}
-                            <div className="p-6">
-                                
-                                {/* Client Type Badge */}
-                                <div className="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full mb-3">
-                                    {project.clientType}
+                                    )}
                                 </div>
 
-                                {/* Title & Icon */}
-                                <div className="flex items-center mb-3">
-                                    <div className="text-blue-400 mr-3 group-hover:scale-110 transition-transform">
-                                        {project.icon}
+                                {/* Project Content */}
+                                <div className="p-6">
+                                    
+                                    {/* Client Type Badge */}
+                                    <div className="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full mb-3">
+                                        {project.clientType}
                                     </div>
-                                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                                </div>
 
-                                {/* Description */}
-                                <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                                    {project.description}
-                                </p>
+                                    {/* Title & Icon */}
+                                    <div className="flex items-center mb-3">
+                                        <div className="text-blue-400 mr-3 group-hover:scale-110 transition-transform">
+                                            {project.icon}
+                                        </div>
+                                        <h3 className="text-xl font-medium text-white" 
+                                            style={{ lineHeight: '1.3' }}>
+                                            {project.title}
+                                        </h3>
+                                    </div>
 
-                                {/* Business Value */}
-                                <div className="mb-4 p-3 bg-gray-700 rounded-lg">
-                                    <h4 className="text-green-400 text-xs font-semibold mb-1 uppercase tracking-wide">Impact</h4>
-                                    <p className="text-gray-200 text-sm">{project.businessValue}</p>
-                                </div>
+                                    {/* Description */}
+                                    <p className="text-gray-400 mb-4 text-sm" 
+                                       style={{ lineHeight: '1.6' }}>
+                                        {project.description}
+                                    </p>
 
-                                {/* Action Buttons */}
-                                <div className="flex space-x-3 mb-4">
-                                    {project.liveUrl && (
+                                    {/* Business Value */}
+                                    <div className="mb-4 p-3 bg-gray-700 rounded-lg">
+                                        <h4 className="text-green-400 text-xs font-medium mb-1 uppercase tracking-wide" 
+                                            style={{ letterSpacing: '0.05em' }}>
+                                            Impact
+                                        </h4>
+                                        <p className="text-gray-200 text-sm" style={{ lineHeight: '1.5' }}>
+                                            {project.businessValue}
+                                        </p>
+                                    </div>
+
+                                    {/* Action Buttons */}
+                                    <div className="flex space-x-3 mb-4">
+                                        {project.liveUrl && (
+                                            <a 
+                                                href={project.liveUrl}
+                                                className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                style={{ lineHeight: '1.4' }}
+                                            >
+                                                <ExternalLink className="w-4 h-4 mr-2" />
+                                                View Live
+                                            </a>
+                                        )}
                                         <a 
-                                            href={project.liveUrl}
-                                            className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors"
+                                            href={project.githubUrl}
+                                            className="flex items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors"
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            style={{ lineHeight: '1.4' }}
                                         >
-                                            <ExternalLink className="w-4 h-4 mr-2" />
-                                            View Live
+                                            <Github className="w-4 h-4 mr-2" />
+                                            Code
                                         </a>
-                                    )}
-                                    <a 
-                                        href={project.githubUrl}
-                                        className="flex items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <Github className="w-4 h-4 mr-2" />
-                                        Code
-                                    </a>
-                                </div>
-
-                                {/* Results */}
-                                <div className="mb-4">
-                                    <h4 className="text-white text-sm font-semibold mb-2">Key Results</h4>
-                                    <div className="space-y-2">
-                                        {project.results.map((result, idx) => (
-                                            <div key={idx} className="flex items-center space-x-2">
-                                                <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                                                <span className="text-sm text-gray-300">{result}</span>
-                                            </div>
-                                        ))}
                                     </div>
-                                </div>
 
-                                {/* Technologies (smaller, less prominent) */}
-                                <div className="border-t border-gray-600 pt-3">
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.technologies.map((tech, idx) => (
-                                            <span 
-                                                key={idx}
-                                                className="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
+                                    {/* Results with Checkmarks */}
+                                    <div className="mb-4">
+                                        <h4 className="text-white text-sm font-medium mb-2" 
+                                            style={{ lineHeight: '1.4' }}>
+                                            Key Results
+                                        </h4>
+                                        <div className="space-y-2">
+                                            {project.results.map((result, idx) => (
+                                                <div key={idx} className="flex items-center space-x-2">
+                                                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                                                    <span className="text-sm text-gray-300" 
+                                                          style={{ lineHeight: '1.5' }}>
+                                                        {result}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
 
+                                    {/* Technologies (smaller, less prominent) */}
+                                    <div className="border-t border-gray-600 pt-3">
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.technologies.map((tech, idx) => (
+                                                <span 
+                                                    key={idx}
+                                                    className="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs"
+                                                    style={{ lineHeight: '1.3' }}
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 {/* Call to Action */}
                 <div className="text-center mt-16">
-                    <p className="text-gray-400 mb-6 text-lg">
+                    <p className="text-gray-400 mb-6 text-lg" style={{ lineHeight: '1.6' }}>
                         Ready to grow your business online?
                     </p>
                     <a 
                         href="#contact"
-                        className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white"
+                        className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-medium text-lg transition-all text-white"
+                        style={{ lineHeight: '1.4' }}
                     >
                         Get In Touch
                     </a>

@@ -55,29 +55,30 @@ const Footer = () => {
                                     />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-white">David Tran</h3>
-                                    <p className="text-sm text-gray-400">Web Developer</p>
+                                    <h3 className="text-xl font-medium text-white" style={{ lineHeight: '1.3' }}>David Tran</h3>
+                                    <p className="text-sm text-gray-400" style={{ lineHeight: '1.4' }}>Web Developer</p>
                                 </div>
                             </div>
-                            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
+                            <p className="text-gray-400 mb-6 max-w-md" style={{ lineHeight: '1.7' }}>
                                 Passionate about creating clean, functional web experiences that make a difference. 
                                 Always learning, always building.
                             </p>
                             <div className="flex items-center space-x-2 text-gray-400 text-sm">
                                 <MapPin className="w-4 h-4 text-blue-400" />
-                                <span>Redlands, CA</span>
+                                <span style={{ lineHeight: '1.5' }}>Redlands, CA</span>
                             </div>
                         </div>
 
                         {/* Quick Links */}
                         <div>
-                            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                            <h4 className="text-lg font-medium text-white mb-4" style={{ lineHeight: '1.3' }}>Quick Links</h4>
                             <ul className="space-y-3">
                                 {quickLinks.map((link, index) => (
                                     <li key={index}>
                                         <a 
                                             href={link.href}
-                                            className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
+                                            className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm focus-ring rounded px-1 py-0.5"
+                                            style={{ lineHeight: '1.5' }}
                                         >
                                             {link.name}
                                         </a>
@@ -88,15 +89,16 @@ const Footer = () => {
 
                         {/* Connect Section */}
                         <div>
-                            <h4 className="text-lg font-semibold text-white mb-4">Let's Connect</h4>
+                            <h4 className="text-lg font-medium text-white mb-4" style={{ lineHeight: '1.3' }}>Let's Connect</h4>
                             <div className="space-y-3 mb-6">
                                 {socialLinks.map((social, index) => (
                                     <a
                                         key={index}
                                         href={social.href}
-                                        className={`flex items-center space-x-3 text-gray-400 ${social.color} transition-colors duration-200 text-sm`}
+                                        className={`flex items-center space-x-3 text-gray-400 ${social.color} transition-colors duration-200 text-sm focus-ring rounded px-1 py-0.5`}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        style={{ lineHeight: '1.5' }}
                                     >
                                         {social.icon}
                                         <span>{social.label}</span>
@@ -107,7 +109,8 @@ const Footer = () => {
                             {/* Back to Top Button */}
                             <button
                                 onClick={scrollToTop}
-                                className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-medium"
+                                className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-medium focus-ring rounded px-1 py-0.5"
+                                style={{ lineHeight: '1.4' }}
                             >
                                 <ArrowUp className="w-4 h-4" />
                                 <span>Back to Top</span>
@@ -121,7 +124,7 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         
                         {/* Copyright */}
-                        <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                        <div className="flex items-center space-x-2 text-gray-400 text-sm" style={{ lineHeight: '1.5' }}>
                             <span>© {currentYear} David Tran. Made with</span>
                             <Heart className="w-4 h-4 text-red-400" />
                             <span>and</span>
@@ -130,18 +133,14 @@ const Footer = () => {
 
                         {/* Tech Stack */}
                         <div className="flex items-center space-x-4 text-xs text-gray-500">
-                            <span className="flex items-center space-x-1">
+                            <span className="flex items-center space-x-1" style={{ lineHeight: '1.4' }}>
                                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                                 <span>React</span>
                             </span>
-                            <span className="flex items-center space-x-1">
+                            <span className="flex items-center space-x-1" style={{ lineHeight: '1.4' }}>
                                 <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                                 <span>Tailwind CSS</span>
                             </span>
-                            {/* <span className="flex items-center space-x-1">
-                                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                                <span>Vercel</span>
-                            </span> */}
                         </div>
                     </div>
                 </div>
