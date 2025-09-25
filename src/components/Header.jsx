@@ -30,7 +30,7 @@ const Header = () => {
                         {/* Logo Text */}
                         <div>
                             <h1 className="text-2xl font-medium" style={{ lineHeight: '1.2' }}>David Tran</h1>
-                            <p className="text-sm text-gray-400" style={{ lineHeight: '1.4' }}>Frontend Developer</p>
+                            <p className="text-sm text-gray-400" style={{ lineHeight: '1.4' }}>Web Developer</p>
                         </div>
                     </a>
 
@@ -44,10 +44,10 @@ const Header = () => {
                         <a href="#contact" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" style={{ lineHeight: '1.4' }}>Contact</a>
 
                         {/* Availability Indicator */}
-                        <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-gray-600">
+                        {/* <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-gray-600">
                             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                             <span className="text-gray-300 text-sm font-medium" style={{ lineHeight: '1.4' }}>Available</span>
-                        </div>
+                        </div> */}
 
                         {/* Social Links */}
                         <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
@@ -106,12 +106,12 @@ const Header = () => {
                                style={{ lineHeight: '1.4' }}>Contact</a>
                             
                             {/* Availability - Mobile */}
-                            <div className="flex items-center space-x-2 pt-2">
+                            {/* <div className="flex items-center space-x-2 pt-2">
                                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                                 <span className="text-gray-300 text-sm font-medium" style={{ lineHeight: '1.4' }}>
                                     Currently Available for Opportunities
                                 </span>
-                            </div>
+                            </div> */}
                             
                             {/* Social Links - Mobile */}
                             <div className="flex items-center space-x-6 pt-4 border-t border-gray-700">

@@ -162,7 +162,7 @@ const Hero = () => {
                         <div className="space-y-6">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-[1.1] tracking-tight" 
                                 style={{ letterSpacing: '-0.025em', lineHeight: '1.1' }}>
-                                Frontend Developer &{' '}
+                                Web Developer &{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
                                     Problem Solver
                                 </span>
