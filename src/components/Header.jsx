@@ -38,7 +38,7 @@ const Header = () => {
                     <nav className="hidden md:flex items-center space-x-8">
 
                         <a href="#home" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" style={{ lineHeight: '1.4' }}>Home</a>
-                        <a href="#services" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" style={{ lineHeight: '1.4' }}>Services</a>
+                        {/* <a href="#services" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" style={{ lineHeight: '1.4' }}>Services</a> */}
                         <a href="#projects" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" style={{ lineHeight: '1.4' }}>Projects</a>
                         <a href="#about" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" style={{ lineHeight: '1.4' }}>About</a>
                         <a href="#contact" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" style={{ lineHeight: '1.4' }}>Contact</a>
@@ -92,9 +92,9 @@ const Header = () => {
                             <a href="#home" onClick={closeMenu} 
                                className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" 
                                style={{ lineHeight: '1.4' }}>Home</a>
-                            <a href="#services" onClick={closeMenu} 
+                            {/* <a href="#services" onClick={closeMenu} 
                                className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" 
-                               style={{ lineHeight: '1.4' }}>Services</a>
+                               style={{ lineHeight: '1.4' }}>Services</a> */}
                             <a href="#projects" onClick={closeMenu} 
                                className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1" 
                                style={{ lineHeight: '1.4' }}>Projects</a>

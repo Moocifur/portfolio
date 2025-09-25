@@ -170,8 +170,7 @@ const Hero = () => {
                             
                             <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl" 
                                style={{ lineHeight: '1.6' }}>
-                                Building responsive web applications with clean code and user-focused design. 
-                                Available for full-time opportunities and freelance projects.
+                                Building modern web applications that help businesses grow online
                             </p>
                         </div>
 
@@ -199,7 +198,7 @@ const Hero = () => {
                         </div>
 
                         {/* Call to Action */}
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a 
                                 href="#contact" 
                                 className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 rounded-xl font-medium text-lg text-white transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25"
