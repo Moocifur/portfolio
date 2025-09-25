@@ -16,7 +16,7 @@ const Footer = () => {
     const socialLinks = [
         {
             icon: <Mail className="w-5 h-5" />,
-            label: "Email",
+            label: "davidkttran@gmail.com",
             href: "mailto:davidkttran@gmail.com",
             color: "hover:text-blue-400"
         },

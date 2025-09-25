@@ -119,7 +119,7 @@ const Header = () => {
                                    className="flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1"
                                    style={{ lineHeight: '1.4' }}>
                                     <Mail className="w-5 h-5" />
-                                    <span className="text-sm">Email</span>
+                                    <span className="text-sm">davidkttran@gmail.com</span>
                                 </a>
                                 <a href="https://linkedin.com/in/david-tran-904086292" 
                                    className="flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1"
