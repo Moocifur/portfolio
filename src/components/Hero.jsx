@@ -10,7 +10,7 @@ const Hero = () => {
         {
             id: 1,
             client: "Lane Orthodontics",
-            result: "40% More Online Bookings",
+            result: "Professional Website with Booking System",
             image: "/lane.jpeg",
             device: "laptop",
             industry: "Healthcare"
@@ -18,7 +18,7 @@ const Hero = () => {
         {
             id: 2,
             client: "Diesel Injection Service",
-            result: "Modern Digital Presence",
+            result: "Modern Business Website",
             image: "/diesel.jpeg",
             device: "mobile",
             industry: "Automotive"
@@ -170,7 +170,7 @@ const Hero = () => {
                             
                             <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl" 
                                style={{ lineHeight: '1.6' }}>
-                                Building modern web applications that help businesses grow online
+                                Creating modern, responsive websites and web applications with clean code and attention to detail
                             </p>
                         </div>
 

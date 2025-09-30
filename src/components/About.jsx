@@ -83,21 +83,20 @@ const About = () => {
 
                         <div className="text-gray-300 space-y-4" style={{ lineHeight: '1.7' }}>
                             <p>
-                                Hi! I'm David, a web developer who loves building things that work well 
-                                and look great. I started my journey in web development because I enjoy 
-                                the problem-solving aspect and seeing ideas come to life in the browser.
+                                Hi! I'm David, a self-taught web developer who loves building things that 
+                                work well and look great. I started learning web development because I enjoy 
+                                problem-solving and seeing ideas come to life in the browser.
                             </p>
                             <p>
                                 I focus on writing clean, maintainable code and creating user experiences 
-                                that are both functional and enjoyable. Whether working with a development 
-                                team or helping a business establish their online presence, I prioritize 
-                                scalable solutions and intuitive design.
+                                that are both functional and enjoyable. Whether I'm building a professional 
+                                website for a business or working on a web application, I prioritize quality 
+                                and attention to detail.
                             </p>
                             <p>
-                                I enjoy collaborating with teams and clients alike, whether that's contributing 
-                                to a larger codebase, mentoring junior developers, or helping a small business 
-                                launch their first website. Every project is an opportunity to learn something 
-                                new and improve my craft.
+                                I'm open to both freelance projects and team opportunities. I enjoy collaborating 
+                                and I'm always eager to learn new techniques and best practices. Every project 
+                                is a chance to grow and create something meaningful.
                             </p>
                         </div>
                     </div>
@@ -189,12 +188,12 @@ const About = () => {
                                 </div>
                                 <h4 className="text-xl font-medium text-white mb-4" 
                                     style={{ lineHeight: '1.3' }}>
-                                    Clean Architecture
+                                    Clean Code
                                 </h4>
                                 <p className="text-gray-400" style={{ lineHeight: '1.7' }}>
-                                    I write code that's easy to read, test, and maintain. 
+                                    I strive to write code that's easy to read and maintain. 
                                     Well-structured applications with clear patterns make 
-                                    collaboration easier and bugs less likely.
+                                    future updates simpler and bugs less likely.
                                 </p>
                             </div>
                         </div>
