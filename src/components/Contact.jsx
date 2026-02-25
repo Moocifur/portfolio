@@ -123,7 +123,7 @@ const Contact = () => {
                                         name="subject"
                                         required
                                         className="w-full pl-12 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all"
-                                        placeholder="Job opportunity, collaboration, etc."
+                                        placeholder="Job opportunity, question, etc."
                                         form="contact-form"
                                     />
                                 </div>

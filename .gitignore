@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Windows download zone identifiers
+*:Zone.Identifier
+*.Identifier

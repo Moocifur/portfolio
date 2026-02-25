@@ -206,7 +206,7 @@ const About = () => {
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <span className="px-3 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm border border-green-500/30">
-                                    Express.js Patterns
+                                    MVC Architecture
                                 </span>
                                 <span className="px-3 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm border border-blue-500/30">
                                     Database Design
