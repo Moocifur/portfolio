@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Monitor, Smartphone, Globe, Code, Database, Zap, Heart, Check } from 'lucide-react';
+import { ExternalLink, Github, Monitor, Globe, Code, Database, Zap, Heart, Check } from 'lucide-react';
 
 const Projects = () => {
     const [imageLoaded, setImageLoaded] = useState({});
@@ -12,14 +12,13 @@ const Projects = () => {
         {
             id: 1,
             title: "Lane Orthodontics",
-            description: "Built a responsive React application with integrated booking system, location-based routing, and mobile-optimized UX that increased patient engagement by 40%.",
+            description: "Production Next.js website for a two-location orthodontics practice. Features location-based routing with unique theming per office, integrated JotForm booking system, and SEO optimization for local search.",
             image: "/lane.jpeg",
-            category: "web",
-            clientType: "Healthcare Practice",
-            businessValue: "Streamlined patient booking and improved online presence across two locations",
-            technologies: ["React", "JavaScript", "CSS3", "JotForm API"],
-            technicalFeatures: ["Responsive Design", "Form Integration", "SEO Optimization", "Performance Tuning"],
-            results: ["Easy Online Booking", "Mobile-Friendly Design", "Location-Specific Information", "Professional Brand Presence"],
+            category: "client",
+            clientType: "Production Client Site",
+            technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS", "JotForm API"],
+            technicalFeatures: ["Location-Based Routing", "Third-Party API Integration", "SEO Optimization", "Responsive Design"],
+            highlights: ["Dual-location theming system", "Integrated booking flow", "Deployed and maintained in production", "Client communication & project management"],
             liveUrl: "https://laneorthodontics.com/",
             githubUrl: "https://github.com/Moocifur/lane-orthodontics",
             icon: <Monitor className="w-6 h-6" />,
@@ -27,14 +26,13 @@ const Projects = () => {
         {
             id: 2,
             title: "Diesel Injection Service",
-            description: "Developed a modern React application with component-based architecture, custom hooks for state management, and optimized performance using Vite build tools.",
+            description: "React business website built with component-based architecture, Tailwind CSS for styling, and Vite for fast builds. Focused on clear information hierarchy and easy customer contact.",
             image: "/diesel-long.png", 
-            category: "web",
-            clientType: "Automotive Service",
-            businessValue: "Enhanced credibility and made it easier for customers to get in touch",
+            category: "client",
+            clientType: "Production Client Site",
             technologies: ["React", "Vite", "Tailwind CSS", "Lucide React"],
-            technicalFeatures: ["Component Architecture", "Custom Hooks", "Responsive Grid", "Icon System"],
-            results: ["Professional Online Presence", "Easy Contact Process", "Customer Testimonials Display", "Mobile-Optimized Experience"],
+            technicalFeatures: ["Component Architecture", "Responsive Layout", "Icon System", "Performance Optimization"],
+            highlights: ["Clean component structure", "Mobile-first responsive design", "Fast load times with Vite", "Client requirements gathering"],
             liveUrl: "https://dieselinjectionservice.com/",
             githubUrl: "https://github.com/Moocifur/diesel-injection-service",
             icon: <Code className="w-6 h-6" />,
@@ -42,14 +40,13 @@ const Projects = () => {
         {
             id: 3,
             title: "David's Barbook",
-            description: "Created an interactive cocktail database using vanilla JavaScript with Webpack bundling, local storage for favorites, and responsive search functionality with real-time filtering.",
+            description: "Interactive cocktail recipe database built with vanilla JavaScript and Webpack. Features local storage for saving favorites, real-time search filtering, and modular ES6+ architecture.",
             image: "/barbookfull.jpeg",
-            category: "web",
-            clientType: "Hospitality Tool",
-            businessValue: "Improved efficiency and customer service for bartending professionals",
+            category: "personal",
+            clientType: "Personal Project",
             technologies: ["JavaScript ES6+", "HTML5", "CSS3", "Webpack"],
-            technicalFeatures: ["Local Storage", "Search Algorithm", "Responsive Design", "Module Bundling"],
-            results: ["Quick Recipe Search", "Save Favorite Drinks", "Works on Any Device", "Fast Performance"],
+            technicalFeatures: ["Local Storage API", "Search & Filter Algorithm", "Module Bundling", "Responsive Design"],
+            highlights: ["Built from scratch with no frameworks", "Custom search implementation", "Persistent data with localStorage", "Webpack build pipeline"],
             liveUrl: "https://moocifur.github.io/barbook/",
             githubUrl: "https://github.com/Moocifur/barbook",
             icon: <Database className="w-6 h-6" />,
@@ -57,14 +54,13 @@ const Projects = () => {
         {
             id: 4,
             title: "RollxWithxIt Therapy",
-            description: "Built an accessible React application with CSS Modules for component styling, WCAG compliance features, and optimized loading performance for mental health services.",
+            description: "Accessible React website for a mental health practice. Built with CSS Modules for component-scoped styling, WCAG compliance considerations, and optimized loading performance.",
             image: "/rollwithit.png", 
-            category: "web",
-            clientType: "Mental Health Practice",
-            businessValue: "Created a welcoming digital presence that reduces barriers to seeking therapy",
+            category: "client",
+            clientType: "Production Client Site",
             technologies: ["React", "Vite", "CSS Modules", "Accessibility APIs"],
             technicalFeatures: ["WCAG Compliance", "CSS Modules", "Component Isolation", "Performance Optimization"],
-            results: ["User-Friendly Design", "Accessibility Compliant", "Mobile-Responsive", "Professional Credibility"],
+            highlights: ["Accessibility-first approach", "Scoped styling with CSS Modules", "Welcoming UX for sensitive audience", "Lighthouse performance tuning"],
             liveUrl: "https://roll-with-xit.netlify.app/", 
             githubUrl: "https://github.com/Moocifur/rollxwithxit", 
             icon: <Heart className="w-6 h-6" />, 
@@ -72,14 +68,13 @@ const Projects = () => {
         {
             id: 5,
             title: "Mountain Freestyle Wrestling Club",
-            description: "Developed a dynamic React application featuring Framer Motion animations, Tailwind CSS v4 styling system, and performance-optimized rendering for elite sports program showcase.",
+            description: "Dynamic React application with Framer Motion animations and Tailwind CSS v4. Built to showcase an elite wrestling program with smooth page transitions and performance-optimized rendering.",
             image: "/wrestling.png", 
-            category: "web",
-            clientType: "Athletic Training Program",
-            businessValue: "Established credible online presence for elite wrestling program attracting serious young athletes",
+            category: "client",
+            clientType: "Production Client Site",
             technologies: ["React", "Framer Motion", "Tailwind CSS v4", "Vite"],
-            technicalFeatures: ["Animation Library", "Modern CSS", "Component Optimization", "Build Tools"],
-            results: ["Animated User Experience", "Olympic Credibility Established", "Professional Sports Branding", "Mobile-Optimized Performance"],
+            technicalFeatures: ["Animation Library Integration", "Modern CSS Framework", "Component Optimization", "Build Tooling"],
+            highlights: ["Smooth scroll-triggered animations", "Tailwind CSS v4 adoption", "Performance-conscious animation patterns", "Professional sports branding"],
             liveUrl: "https://freestylewrestling.netlify.app/", 
             githubUrl: "https://github.com/Moocifur/freestyle-wrestling", 
             icon: <Zap className="w-6 h-6" />, 
@@ -87,14 +82,13 @@ const Projects = () => {
         {
             id: 6,
             title: "React Shopping Cart",
-            description: "Built a full-featured e-commerce application demonstrating React Router for navigation, custom hooks for cart management, API integration patterns, and modern React development practices.",
+            description: "Full-featured e-commerce UI demonstrating React Router for client-side navigation, custom hooks for cart state management, and API integration with the Fake Store API.",
             image: "/shopping.png",
-            category: "web",
-            clientType: "E-commerce Application",
-            businessValue: "Demonstrated modern React development skills with real-world shopping functionality",
+            category: "personal",
+            clientType: "Learning Project",
             technologies: ["React", "React Router", "Custom Hooks", "Fake Store API"],
-            technicalFeatures: ["Router Implementation", "State Management", "API Integration", "Custom Hooks"],
-            results: ["Complete Shopping Experience", "Modern React Patterns", "Responsive Design", "API Integration"],
+            technicalFeatures: ["Client-Side Routing", "State Management", "REST API Integration", "Custom Hooks"],
+            highlights: ["Complete shopping cart logic", "React Router implementation", "Custom useCart hook", "API data fetching patterns"],
             liveUrl: "https://daves-shopping-cart.netlify.app/", 
             githubUrl: "https://github.com/Moocifur/react-shopping-cart", 
             icon: <Globe className="w-6 h-6" />,
@@ -109,12 +103,12 @@ const Projects = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-medium mb-4 text-white" 
                         style={{ letterSpacing: '-0.025em', lineHeight: '1.1' }}>
-                        Featured Projects
+                        Projects
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto" 
                        style={{ lineHeight: '1.6' }}>
-                        A showcase of applications built with modern technologies and development practices, 
-                        delivering both technical excellence and business value.
+                        A mix of production client sites and personal projects — each built to solve real problems 
+                        and deepen my understanding of modern web development.
                     </p>
                 </div>
 
@@ -128,7 +122,6 @@ const Projects = () => {
                                 
                                 {/* Project Image with Skeleton Loader */}
                                 <div className="relative overflow-hidden h-48">
-                                    {/* Skeleton loader */}
                                     {!isLoaded && (
                                         <div className="absolute inset-0 bg-zinc-700 animate-pulse">
                                             <div className="flex items-center justify-center h-full">
@@ -168,14 +161,18 @@ const Projects = () => {
                                 {/* Project Content */}
                                 <div className="p-6">
                                     
-                                    {/* Client Type Badge */}
-                                    <div className="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full mb-3">
+                                    {/* Project Type Badge */}
+                                    <div className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-3 ${
+                                        project.category === 'client' 
+                                            ? 'bg-blue-600 text-white' 
+                                            : 'bg-slate-600 text-slate-200'
+                                    }`}>
                                         {project.clientType}
                                     </div>
 
                                     {/* Title & Icon */}
                                     <div className="flex items-center mb-3">
-                                        <div className="text-blue-400 mr-3 group-hover:scale-110 transition-transform">
+                                        <div className="text-blue-400 mr-3">
                                             {project.icon}
                                         </div>
                                         <h3 className="text-xl font-medium text-white" 
@@ -184,7 +181,7 @@ const Projects = () => {
                                         </h3>
                                     </div>
 
-                                    {/* Enhanced Description with Technical Details */}
+                                    {/* Description */}
                                     <p className="text-gray-400 mb-4 text-sm" 
                                        style={{ lineHeight: '1.6' }}>
                                         {project.description}
@@ -217,10 +214,9 @@ const Projects = () => {
                                                 className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                style={{ lineHeight: '1.4' }}
                                             >
                                                 <ExternalLink className="w-4 h-4 mr-2" />
-                                                Live Demo
+                                                Live Site
                                             </a>
                                         )}
                                         <a 
@@ -228,26 +224,25 @@ const Projects = () => {
                                             className="flex items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            style={{ lineHeight: '1.4' }}
                                         >
                                             <Github className="w-4 h-4 mr-2" />
-                                            Source
+                                            Source Code
                                         </a>
                                     </div>
 
-                                    {/* Business Results */}
+                                    {/* Key Highlights */}
                                     <div className="mb-4">
                                         <h4 className="text-green-400 text-xs font-medium mb-2 uppercase tracking-wide" 
                                             style={{ letterSpacing: '0.05em' }}>
-                                            Results Achieved
+                                            Key Highlights
                                         </h4>
                                         <div className="space-y-2">
-                                            {project.results.map((result, idx) => (
+                                            {project.highlights.map((highlight, idx) => (
                                                 <div key={idx} className="flex items-center space-x-2">
                                                     <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                                                     <span className="text-sm text-gray-300" 
                                                           style={{ lineHeight: '1.5' }}>
-                                                        {result}
+                                                        {highlight}
                                                     </span>
                                                 </div>
                                             ))}
@@ -281,25 +276,23 @@ const Projects = () => {
                 {/* Call to Action */}
                 <div className="text-center mt-16">
                     <p className="text-gray-400 mb-6 text-lg" style={{ lineHeight: '1.6' }}>
-                        Interested in working together or want to see more projects?
+                        Want to see more or discuss my approach to these projects?
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a 
                             href="#contact"
                             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-medium text-lg transition-all text-white hover:scale-105"
-                            style={{ lineHeight: '1.4' }}
                         >
-                            Start a Conversation
+                            Get In Touch
                         </a>
                         <a 
                             href="https://github.com/Moocifur"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center border-2 border-gray-600 hover:border-gray-500 px-8 py-4 rounded-lg font-medium text-lg text-white transition-all hover:bg-gray-800/50"
-                            style={{ lineHeight: '1.4' }}
                         >
                             <Github className="w-5 h-5 mr-2" />
-                            View All Projects
+                            GitHub Profile
                         </a>
                     </div>
                 </div>

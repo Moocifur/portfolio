@@ -56,12 +56,12 @@ const Footer = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-medium text-white" style={{ lineHeight: '1.3' }}>David Tran</h3>
-                                    <p className="text-sm text-gray-400" style={{ lineHeight: '1.4' }}>Web Developer</p>
+                                    <p className="text-sm text-gray-400" style={{ lineHeight: '1.4' }}>Full-Stack Web Developer</p>
                                 </div>
                             </div>
                             <p className="text-gray-400 mb-6 max-w-md" style={{ lineHeight: '1.7' }}>
-                                Passionate about creating clean, functional web experiences that make a difference. 
-                                Always learning, always building.
+                                Building modern web applications with React, Next.js, and Node.js. 
+                                Open to full-time and contract opportunities.
                             </p>
                             <div className="flex items-center space-x-2 text-gray-400 text-sm">
                                 <MapPin className="w-4 h-4 text-blue-400" />
@@ -106,7 +106,6 @@ const Footer = () => {
                                 ))}
                             </div>
                             
-                            {/* Back to Top Button */}
                             <button
                                 onClick={scrollToTop}
                                 className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-medium focus-ring rounded px-1 py-0.5"
@@ -122,8 +121,6 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="py-6 border-t border-gray-800">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                        
-                        {/* Copyright */}
                         <div className="flex items-center space-x-2 text-gray-400 text-sm" style={{ lineHeight: '1.5' }}>
                             <span>© {currentYear} David Tran. Made with</span>
                             <Heart className="w-4 h-4 text-red-400" />
@@ -131,7 +128,6 @@ const Footer = () => {
                             <Code className="w-4 h-4 text-blue-400" />
                         </div>
 
-                        {/* Tech Stack */}
                         <div className="flex items-center space-x-4 text-xs text-gray-500">
                             <span className="flex items-center space-x-1" style={{ lineHeight: '1.4' }}>
                                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>

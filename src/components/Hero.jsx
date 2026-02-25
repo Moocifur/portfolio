@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Award, ChevronRight, ChevronLeft, Star, CheckCircle } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Star, Briefcase } from 'lucide-react';
 
 const Hero = () => {
     const [currentProject, setCurrentProject] = useState(0);
     const [imageLoaded, setImageLoaded] = useState({});
 
-    // Client success stories with business results
     const successStories = [
         {
             id: 1,
             client: "Lane Orthodontics",
-            result: "Professional Website with Booking System",
+            result: "Next.js Multi-Location Website with Booking Integration",
             image: "/lane.jpeg",
             device: "laptop",
             industry: "Healthcare"
@@ -18,7 +17,7 @@ const Hero = () => {
         {
             id: 2,
             client: "Diesel Injection Service",
-            result: "Modern Business Website",
+            result: "React Business Website with Component Architecture",
             image: "/diesel.jpeg",
             device: "mobile",
             industry: "Automotive"
@@ -26,14 +25,13 @@ const Hero = () => {
         {
             id: 3,
             client: "David's Barbook",
-            result: "Interactive Web Application",
+            result: "Vanilla JS Web App with Webpack & Local Storage",
             image: "/barbookfull.jpeg",
             device: "laptop",
-            industry: "Hospitality"
+            industry: "Personal Project"
         }
     ];
 
-    // Auto-rotate carousel
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentProject((prev) => (prev + 1) % successStories.length);
@@ -60,15 +58,11 @@ const Hero = () => {
             <div className="relative mx-auto w-full max-w-96 h-96 flex items-center justify-center px-4">
                 {story.device === 'mobile' ? (
                     <div className="relative w-64 h-96 max-w-full">
-                        {/* Enhanced Phone Frame with better shadows and reflections */}
                         <div className="absolute inset-0 bg-slate-800 rounded-[2.5rem] p-2 shadow-2xl border border-slate-600 
                                       shadow-black/50 before:absolute before:inset-0 before:rounded-[2.5rem] 
                                       before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none">
                             <div className="w-full h-full bg-black rounded-[2rem] overflow-hidden relative">
-                                {/* Screen reflection overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent rounded-[2rem] z-10 pointer-events-none"></div>
-                                
-                                {/* Skeleton loader */}
                                 {!isLoaded && (
                                     <div className="absolute inset-0 bg-slate-700 animate-pulse rounded-[2rem]">
                                         <div className="flex flex-col space-y-4 p-4 pt-8">
@@ -82,8 +76,6 @@ const Hero = () => {
                                         </div>
                                     </div>
                                 )}
-                                
-                                {/* Screen Content */}
                                 <img 
                                     src={story.image} 
                                     alt={`${story.client} website`}
@@ -94,20 +86,15 @@ const Hero = () => {
                                 />
                             </div>
                         </div>
-                        {/* Bottom reflection */}
                         <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-8 bg-gradient-to-b from-slate-800/30 to-transparent blur-sm rounded-full"></div>
                     </div>
                 ) : (
                     <div className="relative w-full max-w-[420px] h-72">
-                        {/* Enhanced Laptop Frame with better shadows and reflections */}
                         <div className="absolute inset-0 bg-slate-800 rounded-t-xl shadow-2xl p-3 border border-slate-600 
                                       shadow-black/50 before:absolute before:inset-0 before:rounded-t-xl 
                                       before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none">
                             <div className="w-full h-60 bg-black rounded-lg overflow-hidden relative">
-                                {/* Screen reflection overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/20 rounded-lg z-10 pointer-events-none"></div>
-                                
-                                {/* Skeleton loader */}
                                 {!isLoaded && (
                                     <div className="absolute inset-0 bg-slate-700 animate-pulse rounded-lg">
                                         <div className="flex flex-col space-y-4 p-6">
@@ -121,7 +108,6 @@ const Hero = () => {
                                         </div>
                                     </div>
                                 )}
-                                
                                 <img 
                                     src={story.image} 
                                     alt={`${story.client} website`}
@@ -131,12 +117,10 @@ const Hero = () => {
                                     onLoad={() => handleImageLoad(story.id)}
                                 />
                             </div>
-                            {/* Enhanced laptop base with gradient and shadow */}
                             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-[calc(100%+2rem)] max-w-[28rem] h-4 
                                           bg-gradient-to-b from-slate-700 to-slate-800 rounded-b-xl 
                                           shadow-lg shadow-black/30"></div>
                         </div>
-                        {/* Bottom reflection */}
                         <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-80 h-12 bg-gradient-to-b from-slate-800/20 to-transparent blur-md rounded-full"></div>
                     </div>
                 )}
@@ -149,50 +133,56 @@ const Hero = () => {
             id="home" 
             className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
         >
-            {/* Background Pattern */}
             <div className="absolute inset-0 bg-grid-slate-700/25 bg-[size:60px_60px] opacity-20"></div>
             
             <div className="container mx-auto px-6 lg:px-8 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
 
-                    {/* Left Side - More Balanced Content */}
+                    {/* Left Side */}
                     <div className="space-y-8">
+                        
+                        {/* Open to Work Badge */}
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full">
+                            <Briefcase className="w-4 h-4 text-green-400" />
+                            <span className="text-green-400 font-medium text-sm">Open to Full-Time & Contract Roles</span>
+                        </div>
 
-                        {/* Updated Main Headline */}
+                        {/* Main Headline */}
                         <div className="space-y-6">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-[1.1] tracking-tight" 
                                 style={{ letterSpacing: '-0.025em', lineHeight: '1.1' }}>
-                                Web Developer &{' '}
+                                Full-Stack{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                                    Problem Solver
+                                    Web Developer
                                 </span>
                             </h1>
                             
                             <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl" 
                                style={{ lineHeight: '1.6' }}>
-                                Creating modern, responsive websites and web applications with clean code and attention to detail
+                                Building production websites and web applications with React, Next.js, and Node.js. 
+                                Self-taught through The Odin Project with 1,000+ hours of hands-on development.
                             </p>
                         </div>
 
-                        {/* Updated Value Proposition - More Technical */}
+                        {/* Technical Stack Summary */}
                         <div className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-2xl p-6 space-y-4">
-                            <h3 className="text-lg font-medium text-white" style={{ lineHeight: '1.4' }}>Technical Focus:</h3>
+                            <h3 className="text-lg font-medium text-white" style={{ lineHeight: '1.4' }}>Core Stack:</h3>
                             <div className="grid sm:grid-cols-2 gap-3 text-slate-300">
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>React & Modern JavaScript</span>
+                                    <span style={{ lineHeight: '1.5' }}>React / Next.js</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>Responsive Design</span>
+                                    <span style={{ lineHeight: '1.5' }}>Node.js / Express</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>Performance Optimization</span>
+                                    <span style={{ lineHeight: '1.5' }}>JavaScript / TypeScript</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>Clean, Maintainable Code</span>
+                                    <span style={{ lineHeight: '1.5' }}>PostgreSQL / SQL</span>
                                 </div>
                             </div>
                         </div>
@@ -202,24 +192,21 @@ const Hero = () => {
                             <a 
                                 href="#contact" 
                                 className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 rounded-xl font-medium text-lg text-white transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25"
-                                style={{ lineHeight: '1.4' }}
                             >
-                                Let's Connect
+                                Get In Touch
                             </a>
                             <a 
                                 href="#projects" 
                                 className="inline-flex items-center justify-center border-2 border-slate-600 hover:border-slate-500 px-8 py-4 rounded-xl font-medium text-lg text-white transition-all duration-300 hover:bg-slate-800/50"
-                                style={{ lineHeight: '1.4' }}
                             >
                                 View Projects
                             </a>
                         </div>
                     </div>
 
-                    {/* Right Side - Client Success Showcase */}
+                    {/* Right Side — Project Showcase */}
                     <div className="relative">
                         <div className="flex flex-col items-center space-y-8">
-                            {/* Success Story Info */}
                             <div className="text-center space-y-4">
                                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
                                     <Star className="w-4 h-4 text-emerald-400" />
@@ -239,7 +226,6 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* Device Mockup */}
                             <div className="relative transition-all duration-500 ease-in-out w-full">
                                 <DeviceMockup story={successStories[currentProject]} />
                             </div>
@@ -253,7 +239,6 @@ const Hero = () => {
                                     <ChevronLeft className="w-5 h-5" />
                                 </button>
 
-                                {/* Dots Indicator */}
                                 <div className="flex space-x-3">
                                     {successStories.map((_, index) => (
                                         <button

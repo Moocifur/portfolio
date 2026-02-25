@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
-
-@import "tailwindcss";
-
 /* Global Typography Improvements */
 html {
   scroll-behavior: smooth;
@@ -16,7 +10,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
-/* Main headings */
 h1 {
   line-height: 1.1;
 }
@@ -33,17 +26,14 @@ h4 {
   line-height: 1.3;
 }
 
-/* Body text improvements */
 p {
   line-height: 1.6;
 }
 
-/* List improvements */
 li {
   line-height: 1.5;
 }
 
-/* Button and link improvements */
 button, a {
   line-height: 1.4;
 }
@@ -59,11 +49,11 @@ textarea:focus-visible {
 
 /* Better contrast for accessibility */
 .text-gray-300 {
-  color: #d1d5db; /* Improved contrast ratio */
+  color: #d1d5db;
 }
 
 .text-gray-400 {
-  color: #9ca3af; /* Improved contrast ratio */
+  color: #9ca3af;
 }
 
 /* Skeleton loader animation */

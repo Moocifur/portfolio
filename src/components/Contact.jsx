@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Send, Github, Linkedin, User, FileText } from 'lucide-react';
+import { Mail, Send, Github, Linkedin, User, FileText, Briefcase } from 'lucide-react';
 
 const Contact = () => {
     const socialLinks = [
@@ -30,21 +30,47 @@ const Contact = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                        Get In Touch
+                        Let's Connect
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Have a project in mind, exploring opportunities, or just want to connect?
+                        I'm actively looking for full-time and contract web development roles. 
+                        Whether you have an opening, want to chat about a project, or just want to say hello — I'd love to hear from you.
                     </p>
                 </div>
 
                 {/* Centered Layout */}
                 <div className="max-w-2xl mx-auto">
+
+                    {/* What I'm Looking For */}
+                    <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 mb-8">
+                        <div className="flex items-center gap-3 mb-4">
+                            <Briefcase className="w-5 h-5 text-green-400" />
+                            <h3 className="text-lg font-medium text-white">What I'm Looking For</h3>
+                        </div>
+                        <div className="grid sm:grid-cols-2 gap-3 text-gray-300 text-sm">
+                            <div className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                                <span>Junior / Mid-Level Developer Roles</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                                <span>Full-Time or Contract Positions</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                                <span>Remote or Southern California</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                                <span>Frontend or Full-Stack Focus</span>
+                            </div>
+                        </div>
+                    </div>
                     
                     {/* Contact Form */}
                     <div className="bg-gray-800 rounded-xl p-8 mb-12">
                         <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
                         
-                        {/* Simple HTML Form */}
                         <div className="space-y-6">
                             {/* Name Field */}
                             <div>
@@ -97,7 +123,7 @@ const Contact = () => {
                                         name="subject"
                                         required
                                         className="w-full pl-12 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all"
-                                        placeholder="What's this about?"
+                                        placeholder="Job opportunity, collaboration, etc."
                                         form="contact-form"
                                     />
                                 </div>
@@ -114,7 +140,7 @@ const Contact = () => {
                                     required
                                     rows={5}
                                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all resize-none"
-                                    placeholder="Tell me about your project or just say hello..."
+                                    placeholder="Tell me about the role or project..."
                                     form="contact-form"
                                 ></textarea>
                             </div>
@@ -137,13 +163,12 @@ const Contact = () => {
                                 action="https://formspree.io/f/xpwrgvyq" 
                                 method="POST"
                             >
-                                {/* Hidden honeypot field for spam protection */}
                                 <input type="text" name="_gotcha" style={{ display: 'none' }} />
                             </form>
                         </div>
                     </div>
 
-                    {/* Social Icons - Centered Below Form */}
+                    {/* Social Icons */}
                     <div className="text-center">
                         <div className="flex justify-center space-x-6">
                             {socialLinks.map((social, index) => (
