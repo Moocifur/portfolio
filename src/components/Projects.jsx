@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Monitor, Globe, Code, Database, Zap, Heart, Check } from 'lucide-react';
+import { ExternalLink, Github, Monitor, Globe, Code, Database, Check } from 'lucide-react';
 
 const Projects = () => {
     const [imageLoaded, setImageLoaded] = useState({});
@@ -53,34 +53,6 @@ const Projects = () => {
         },
         {
             id: 4,
-            title: "RollxWithxIt Therapy",
-            description: "Accessible React website for a mental health practice. Built with CSS Modules for component-scoped styling, WCAG compliance considerations, and optimized loading performance.",
-            image: "/rollwithit.png", 
-            category: "client",
-            clientType: "Production Client Site",
-            technologies: ["React", "Vite", "CSS Modules", "Accessibility APIs"],
-            technicalFeatures: ["WCAG Compliance", "CSS Modules", "Component Isolation", "Performance Optimization"],
-            highlights: ["Accessibility-first approach", "Scoped styling with CSS Modules", "Welcoming UX for sensitive audience", "Lighthouse performance tuning"],
-            liveUrl: "https://roll-with-xit.netlify.app/", 
-            githubUrl: "https://github.com/Moocifur/rollxwithxit", 
-            icon: <Heart className="w-6 h-6" />, 
-        },
-        {
-            id: 5,
-            title: "Mountain Freestyle Wrestling Club",
-            description: "Dynamic React application with Framer Motion animations and Tailwind CSS v4. Built to showcase an elite wrestling program with smooth page transitions and performance-optimized rendering.",
-            image: "/wrestling.png", 
-            category: "client",
-            clientType: "Production Client Site",
-            technologies: ["React", "Framer Motion", "Tailwind CSS v4", "Vite"],
-            technicalFeatures: ["Animation Library Integration", "Modern CSS Framework", "Component Optimization", "Build Tooling"],
-            highlights: ["Smooth scroll-triggered animations", "Tailwind CSS v4 adoption", "Performance-conscious animation patterns", "Professional sports branding"],
-            liveUrl: "https://freestylewrestling.netlify.app/", 
-            githubUrl: "https://github.com/Moocifur/freestyle-wrestling", 
-            icon: <Zap className="w-6 h-6" />, 
-        },
-        {
-            id: 6,
             title: "React Shopping Cart",
             description: "Full-featured e-commerce UI demonstrating React Router for client-side navigation, custom hooks for cart state management, and API integration with the Fake Store API.",
             image: "/shopping.png",
