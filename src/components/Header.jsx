@@ -34,12 +34,6 @@ const Header = () => {
                         <a href="#about" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1">About</a>
                         <a href="#contact" className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1">Contact</a>
 
-                        {/* Open to Work Indicator */}
-                        <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-gray-600">
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                            <span className="text-green-400 text-sm font-medium" style={{ lineHeight: '1.4' }}>Open to Work</span>
-                        </div>
-
                         {/* Social Links */}
                         <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
                             <a href="mailto:davidkttran@gmail.com" 
@@ -82,14 +76,6 @@ const Header = () => {
                             <a href="#projects" onClick={closeMenu} className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1">Projects</a>
                             <a href="#about" onClick={closeMenu} className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1">About</a>
                             <a href="#contact" onClick={closeMenu} className="hover:text-blue-400 transition-colors focus-ring rounded px-2 py-1">Contact</a>
-                            
-                            {/* Open to Work — Mobile */}
-                            <div className="flex items-center space-x-2 pt-2">
-                                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                <span className="text-green-400 text-sm font-medium" style={{ lineHeight: '1.4' }}>
-                                    Open to Work — Full-Time & Contract
-                                </span>
-                            </div>
                             
                             {/* Social Links — Mobile */}
                             <div className="flex items-center space-x-6 pt-4 border-t border-gray-700">

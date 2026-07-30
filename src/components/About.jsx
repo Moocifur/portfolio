@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import { Heart, Lightbulb, Code } from 'lucide-react';
-import { 
-    FaReact, 
-    FaJs, 
-    FaHtml5, 
-    FaCss3Alt, 
+import {
+    FaReact,
+    FaJs,
+    FaHtml5,
     FaGithub,
     FaNodeJs
 } from 'react-icons/fa';
-import { 
-    SiTailwindcss, 
-    SiVite, 
-    SiFramer,
+import {
+    SiTailwindcss,
+    SiVite,
     SiReactrouter,
     SiNextdotjs,
     SiExpress,
     SiPostgresql,
-    SiTypescript
+    SiPrisma,
+    SiPassport,
+    SiJsonwebtokens,
+    SiEjs
 } from 'react-icons/si';
 
 const About = () => {
@@ -26,17 +27,19 @@ const About = () => {
         { name: "React", icon: <FaReact className="w-5 h-5" />, color: "text-blue-400" },
         { name: "Next.js", icon: <SiNextdotjs className="w-5 h-5" />, color: "text-white" },
         { name: "JavaScript ES6+", icon: <FaJs className="w-5 h-5" />, color: "text-yellow-400" },
-        { name: "TypeScript", icon: <SiTypescript className="w-5 h-5" />, color: "text-blue-500" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5" />, color: "text-cyan-400" },
         { name: "HTML5 / CSS3", icon: <FaHtml5 className="w-5 h-5" />, color: "text-orange-400" },
         { name: "React Router", icon: <SiReactrouter className="w-5 h-5" />, color: "text-red-400" },
-        { name: "Framer Motion", icon: <SiFramer className="w-5 h-5" />, color: "text-pink-400" },
     ];
 
     const backendSkills = [
         { name: "Node.js", icon: <FaNodeJs className="w-5 h-5" />, color: "text-green-400" },
         { name: "Express.js", icon: <SiExpress className="w-5 h-5" />, color: "text-gray-300" },
         { name: "PostgreSQL / SQL", icon: <SiPostgresql className="w-5 h-5" />, color: "text-blue-300" },
+        { name: "Prisma", icon: <SiPrisma className="w-5 h-5" />, color: "text-teal-300" },
+        { name: "Passport.js", icon: <SiPassport className="w-5 h-5" />, color: "text-gray-200" },
+        { name: "JWT Auth", icon: <SiJsonwebtokens className="w-5 h-5" />, color: "text-pink-400" },
+        { name: "EJS", icon: <SiEjs className="w-5 h-5" />, color: "text-yellow-300" },
     ];
 
     const toolsSkills = [
@@ -199,20 +202,14 @@ const About = () => {
                         {/* Currently Learning */}
                         <div className="bg-gray-900/30 rounded-xl p-6 border border-gray-700/30">
                             <h4 className="text-lg font-medium text-white mb-3" style={{ lineHeight: '1.3' }}>
-                                Currently Deepening
+                                Currently Learning
                             </h4>
                             <p className="text-gray-400 text-sm mb-3" style={{ lineHeight: '1.5' }}>
-                                Actively building with these through The Odin Project's full-stack curriculum
+                                Actively building toward these, not claiming mastery yet
                             </p>
                             <div className="flex flex-wrap gap-3">
-                                <span className="px-3 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm border border-green-500/30">
-                                    MVC Architecture
-                                </span>
                                 <span className="px-3 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm border border-blue-500/30">
-                                    Database Design
-                                </span>
-                                <span className="px-3 py-2 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30">
-                                    Authentication & Security
+                                    TypeScript
                                 </span>
                             </div>
                         </div>

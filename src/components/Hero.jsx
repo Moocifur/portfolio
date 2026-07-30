@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, ChevronLeft, Star, Briefcase } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Star } from 'lucide-react';
 
 const Hero = () => {
     const [currentProject, setCurrentProject] = useState(0);
@@ -141,12 +141,6 @@ const Hero = () => {
                     {/* Left Side */}
                     <div className="space-y-8">
                         
-                        {/* Open to Work Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full">
-                            <Briefcase className="w-4 h-4 text-green-400" />
-                            <span className="text-green-400 font-medium text-sm">Open to Full-Time & Contract Roles</span>
-                        </div>
-
                         {/* Main Headline */}
                         <div className="space-y-6">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-[1.1] tracking-tight" 
@@ -178,11 +172,11 @@ const Hero = () => {
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>JavaScript / TypeScript</span>
+                                    <span style={{ lineHeight: '1.5' }}>JavaScript ES6+</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                                    <span style={{ lineHeight: '1.5' }}>PostgreSQL / SQL</span>
+                                    <span style={{ lineHeight: '1.5' }}>PostgreSQL / Prisma</span>
                                 </div>
                             </div>
                         </div>

@@ -10,6 +10,20 @@ const Projects = () => {
 
     const projects = [
         {
+            id: 2,
+            title: "Diesel Injection Service",
+            description: "Full e-commerce rebuild of the original client site — a three-app platform (Next.js storefront, React admin panel, Express/Prisma API) for browsing and ordering diesel injection parts. Includes customer accounts, cart and checkout, wholesale request forms, core-charge tracking, and a role-protected admin dashboard for managing parts, orders, and users.",
+            image: "/diesel-long.png",
+            category: "client",
+            clientType: "Production Client Site",
+            technologies: ["Next.js", "React", "Express", "Prisma", "PostgreSQL", "JWT Auth", "Tailwind CSS"],
+            technicalFeatures: ["JWT Authentication", "Role-Based Access Control", "Prisma / PostgreSQL ORM", "Multi-App Architecture"],
+            highlights: ["Customer storefront with cart & order history", "Admin dashboard for parts, orders & users", "RESTful API built with Express & Prisma", "Core-charge exchange tracking for parts"],
+            liveUrl: "https://dieselinjectionservice.com/",
+            githubUrl: "https://github.com/Moocifur/diesel-injection-service",
+            icon: <Database className="w-6 h-6" />,
+        },
+        {
             id: 1,
             title: "Lane Orthodontics",
             description: "Production Next.js website for a two-location orthodontics practice. Features location-based routing with unique theming per office, integrated JotForm booking system, and SEO optimization for local search.",
@@ -22,20 +36,6 @@ const Projects = () => {
             liveUrl: "https://laneorthodontics.com/",
             githubUrl: "https://github.com/Moocifur/lane-orthodontics",
             icon: <Monitor className="w-6 h-6" />,
-        },
-        {
-            id: 2,
-            title: "Diesel Injection Service",
-            description: "React business website built with component-based architecture, Tailwind CSS for styling, and Vite for fast builds. Focused on clear information hierarchy and easy customer contact.",
-            image: "/diesel-long.png", 
-            category: "client",
-            clientType: "Production Client Site",
-            technologies: ["React", "Vite", "Tailwind CSS", "Lucide React"],
-            technicalFeatures: ["Component Architecture", "Responsive Layout", "Icon System", "Performance Optimization"],
-            highlights: ["Clean component structure", "Mobile-first responsive design", "Fast load times with Vite", "Client requirements gathering"],
-            liveUrl: "https://dieselinjectionservice.com/",
-            githubUrl: "https://github.com/Moocifur/diesel-injection-service",
-            icon: <Code className="w-6 h-6" />,
         },
         {
             id: 3,
