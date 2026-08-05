@@ -17,7 +17,9 @@ import {
     SiPrisma,
     SiPassport,
     SiJsonwebtokens,
-    SiEjs
+    SiEjs,
+    SiNetlify,
+    SiRender
 } from 'react-icons/si';
 
 const About = () => {
@@ -25,7 +27,7 @@ const About = () => {
 
     const frontendSkills = [
         { name: "React", icon: <FaReact className="w-5 h-5" />, color: "text-blue-400" },
-        { name: "Next.js", icon: <SiNextdotjs className="w-5 h-5" />, color: "text-white" },
+        { name: "Next.js (App Router)", icon: <SiNextdotjs className="w-5 h-5" />, color: "text-white" },
         { name: "JavaScript ES6+", icon: <FaJs className="w-5 h-5" />, color: "text-yellow-400" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5" />, color: "text-cyan-400" },
         { name: "HTML5 / CSS3", icon: <FaHtml5 className="w-5 h-5" />, color: "text-orange-400" },
@@ -45,6 +47,8 @@ const About = () => {
     const toolsSkills = [
         { name: "Git / GitHub", icon: <FaGithub className="w-5 h-5" />, color: "text-gray-400" },
         { name: "Vite", icon: <SiVite className="w-5 h-5" />, color: "text-purple-400" },
+        { name: "Netlify", icon: <SiNetlify className="w-5 h-5" />, color: "text-teal-400" },
+        { name: "Render", icon: <SiRender className="w-5 h-5" />, color: "text-indigo-300" },
     ];
 
     return (

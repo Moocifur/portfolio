@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Monitor, Globe, Code, Database, Check } from 'lucide-react';
+import { ExternalLink, Github, Monitor, Globe, Database, Check } from 'lucide-react';
 
 const Projects = () => {
     const [imageLoaded, setImageLoaded] = useState({});
@@ -12,15 +12,34 @@ const Projects = () => {
         {
             id: 2,
             title: "Diesel Injection Service",
-            description: "Full e-commerce rebuild of the original client site — a three-app platform (Next.js storefront, React admin panel, Express/Prisma API) for browsing and ordering diesel injection parts. Includes customer accounts, cart and checkout, wholesale request forms, core-charge tracking, and a role-protected admin dashboard for managing parts, orders, and users.",
+            description: "Production business website for a real diesel fuel injection repair shop — built with Next.js, covering services, location, and contact info. Live and serving customers today, and the foundation the in-progress e-commerce shop is being built on top of.",
             image: "/diesel-long.png",
             category: "client",
             clientType: "Production Client Site",
-            technologies: ["Next.js", "React", "Express", "Prisma", "PostgreSQL", "JWT Auth", "Tailwind CSS"],
-            technicalFeatures: ["JWT Authentication", "Role-Based Access Control", "Prisma / PostgreSQL ORM", "Multi-App Architecture"],
-            highlights: ["Customer storefront with cart & order history", "Admin dashboard for parts, orders & users", "RESTful API built with Express & Prisma", "Core-charge exchange tracking for parts"],
+            technologies: ["Next.js", "React", "Tailwind CSS"],
+            technicalFeatures: ["Responsive Design", "SEO Optimization", "Business Info & Contact", "Production Deployment"],
+            highlights: ["Live production site for a real business", "Built with Next.js App Router", "Deployed on Netlify with a custom domain", "Client requirements gathering & communication"],
             liveUrl: "https://dieselinjectionservice.com/",
-            githubUrl: "https://github.com/Moocifur/diesel-injection-service",
+            githubUrl: "https://github.com/Moocifur/dis-shop",
+            icon: <Monitor className="w-6 h-6" />,
+        },
+        {
+            id: 5,
+            title: "Diesel Injection Service — E-Commerce (In Progress)",
+            description: "In-progress e-commerce layer being built on top of the Diesel Injection Service site — a three-app platform (Next.js storefront, React admin panel, Express/Prisma API) for browsing and ordering diesel injection parts. Customers will search a parts catalog, get wholesale-tier pricing, and track core-charge deposits on returnable parts; admins manage inventory, orders, and accounts from a separate dashboard. Includes a live supplier integration with Alliant Power's Dealer-to-Consumer program — a token-authenticated feed exposing real-time inventory in their required schema, used to import their ~4,500-line manufacturer parts list.",
+            image: "/dis-shop-parts.png",
+            category: "in-progress",
+            clientType: "In Progress",
+            technologies: ["Next.js", "React", "Express", "Prisma", "PostgreSQL", "JWT Auth", "Tailwind CSS"],
+            technicalFeatures: ["Third-Party API Integration", "JWT Auth (Cookie + Header)", "Server Components (BFF)", "Role-Based Access Control"],
+            highlights: [
+                "Live supplier integration: token-authenticated inventory feed for Alliant Power's D2C program",
+                "Wholesale pricing system with per-customer discount tiers, guaranteed consistent via a shared pricing service",
+                "Core-charge deposit/refund tracking — a diesel-industry-specific workflow",
+                "Deployed across Netlify (storefront + admin), Render (API), and Neon (Postgres)",
+            ],
+            liveUrl: null,
+            githubUrl: "https://github.com/Moocifur/dis-shop",
             icon: <Database className="w-6 h-6" />,
         },
         {
@@ -135,8 +154,10 @@ const Projects = () => {
                                     
                                     {/* Project Type Badge */}
                                     <div className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-3 ${
-                                        project.category === 'client' 
-                                            ? 'bg-blue-600 text-white' 
+                                        project.category === 'client'
+                                            ? 'bg-blue-600 text-white'
+                                            : project.category === 'in-progress'
+                                            ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
                                             : 'bg-slate-600 text-slate-200'
                                     }`}>
                                         {project.clientType}
