@@ -26,14 +26,14 @@ const Projects = () => {
         {
             id: 5,
             title: "Diesel Injection Service — E-Commerce (In Progress)",
-            description: "In-progress e-commerce layer being built on top of the Diesel Injection Service site — a three-app platform (Next.js storefront, React admin panel, Express/Prisma API) for browsing and ordering diesel injection parts. Customers will search a parts catalog, get wholesale-tier pricing, and track core-charge deposits on returnable parts; admins manage inventory, orders, and accounts from a separate dashboard. Includes a live supplier integration with Alliant Power's Dealer-to-Consumer program — a token-authenticated feed exposing real-time inventory in their required schema, used to import their ~4,500-line manufacturer parts list.",
+            description: "In-progress e-commerce layer being built on top of the Diesel Injection Service site — a three-app platform (Next.js storefront, React admin panel, Express/Prisma API) for browsing and ordering diesel injection parts. Customers will search a parts catalog, get wholesale-tier pricing, and track core-charge deposits on returnable parts; admins manage inventory, orders, and accounts from a separate dashboard. Includes a live integration with a major parts manufacturer's supplier program — a token-authenticated feed exposing real-time inventory in their required schema, used to import a ~4,500-line manufacturer parts list.",
             image: "/dis-shop-parts.png",
             category: "in-progress",
             clientType: "In Progress",
             technologies: ["Next.js", "React", "Express", "Prisma", "PostgreSQL", "JWT Auth", "Tailwind CSS"],
             technicalFeatures: ["Third-Party API Integration", "JWT Auth (Cookie + Header)", "Server Components (BFF)", "Role-Based Access Control"],
             highlights: [
-                "Live supplier integration: token-authenticated inventory feed for Alliant Power's D2C program",
+                "Live supplier integration: token-authenticated inventory feed for a manufacturer's dealer program",
                 "Wholesale pricing system with per-customer discount tiers, guaranteed consistent via a shared pricing service",
                 "Core-charge deposit/refund tracking — a diesel-industry-specific workflow",
                 "Deployed across Netlify (storefront + admin), Render (API), and Neon (Postgres)",
