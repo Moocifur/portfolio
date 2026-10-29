@@ -10,9 +10,61 @@ const Projects = () => {
 
     const projects = [
         {
+            id: 6,
+            title: "Northline Diesel Supply",
+            description: "Full-stack e-commerce demo store for a fictional diesel parts supplier — a three-app platform (Next.js storefront, React admin panel, Express/Prisma API) with a searchable parts catalog, wholesale-tier pricing, and core-charge deposit tracking. Originally built for a real client, then rebranded with fictional data as a portfolio demo.",
+            image: "/northline.png",
+            category: "demo",
+            clientType: "Demo Store",
+            technologies: ["Next.js", "React", "Express", "Prisma", "PostgreSQL", "JWT Auth", "Tailwind CSS"],
+            technicalFeatures: ["JWT Auth (httpOnly Cookies)", "Server Components (BFF)", "Role-Based Access Control", "REST API"],
+            highlights: [
+                "Wholesale pricing enforced server-side, so unapproved users never receive wholesale prices",
+                "Wholesale approval flow with role-based middleware",
+                "Core-charge deposit/refund tracking — a diesel-industry-specific workflow",
+                "Storefront, admin panel, and API as separate apps",
+            ],
+            liveUrl: null,
+            githubUrl: "https://github.com/Moocifur/northline-diesel-supply",
+            icon: <Database className="w-6 h-6" />,
+        },
+        {
+            id: 7,
+            title: "Ms. Bumble's Furniture",
+            description: "Responsive promo landing page built to mirror a front-end role: Bootstrap layout, product cards loaded from JSON with jQuery AJAX, and an A/B test script with persistent variant assignment, a URL preview override, and impression/click tracking.",
+            image: "/bumbles-furniture.png",
+            category: "personal",
+            clientType: "Practice Project",
+            technologies: ["HTML5", "Bootstrap 5", "jQuery", "JavaScript"],
+            technicalFeatures: ["A/B Testing Script", "AJAX (getJSON)", "Responsive Design", "Accessibility & SEO Audit"],
+            highlights: [
+                "A/B variants saved in localStorage; ?variant=b previews without counting",
+                "Lighthouse: Performance 97, Accessibility 100, Best Practices 100, SEO 100",
+                "Fixed heading order, landmarks, image dimensions, and meta description from audit findings",
+                "Deployed on Netlify with auto-deploy from GitHub",
+            ],
+            liveUrl: "https://bumbles-furniture.netlify.app/",
+            githubUrl: "https://github.com/Moocifur/furniture-landing",
+            icon: <Globe className="w-6 h-6" />,
+        },
+        {
+            id: 1,
+            title: "Lane Orthodontics",
+            description: "Production Next.js website for a two-location orthodontics practice. Features location-based routing with unique theming per office, integrated JotForms, a Rhinogram chat widget, and SEO optimization for local search.",
+            image: "/lane.jpeg",
+            category: "client",
+            clientType: "Production Client Site",
+            technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS", "JotForm API", "Rhinogram Chat"],
+            technicalFeatures: ["Location-Based Routing", "Third-Party API Integration", "SEO Optimization", "Responsive Design"],
+            highlights: ["Dual-location theming system", "Integrated booking flow", "Deployed and maintained in production", "Client communication & project management"],
+            liveUrl: "https://laneorthodontics.com/",
+            githubUrl: "https://github.com/Moocifur/lane-orthodontics",
+            icon: <Monitor className="w-6 h-6" />,
+        },
+        {
             id: 2,
             title: "Diesel Injection Service",
-            description: "Production business website for a real diesel fuel injection repair shop — built with Next.js, covering services, location, and contact info. Live and serving customers today, and the foundation the in-progress e-commerce shop is being built on top of.",
+            description: "Production business website for a real diesel fuel injection repair shop — built with Next.js, covering services, location, and contact info. Live and serving customers today.",
             image: "/diesel-long.png",
             category: "client",
             clientType: "Production Client Site",
@@ -20,42 +72,10 @@ const Projects = () => {
             technicalFeatures: ["Responsive Design", "SEO Optimization", "Business Info & Contact", "Production Deployment"],
             highlights: ["Live production site for a real business", "Built with Next.js App Router", "Deployed on Netlify with a custom domain", "Client requirements gathering & communication"],
             liveUrl: "https://dieselinjectionservice.com/",
-            githubUrl: "https://github.com/Moocifur/dis-shop",
+            githubUrl: "https://github.com/Moocifur/diesel-injection-service",
             icon: <Monitor className="w-6 h-6" />,
         },
-        {
-            id: 5,
-            title: "Diesel Injection Service — E-Commerce (In Progress)",
-            description: "In-progress e-commerce layer being built on top of the Diesel Injection Service site — a three-app platform (Next.js storefront, React admin panel, Express/Prisma API) for browsing and ordering diesel injection parts. Customers will search a parts catalog, get wholesale-tier pricing, and track core-charge deposits on returnable parts; admins manage inventory, orders, and accounts from a separate dashboard. Includes a live integration with a major parts manufacturer's supplier program — a token-authenticated feed exposing real-time inventory in their required schema, used to import a ~4,500-line manufacturer parts list.",
-            image: "/dis-shop-parts.png",
-            category: "in-progress",
-            clientType: "In Progress",
-            technologies: ["Next.js", "React", "Express", "Prisma", "PostgreSQL", "JWT Auth", "Tailwind CSS"],
-            technicalFeatures: ["Third-Party API Integration", "JWT Auth (Cookie + Header)", "Server Components (BFF)", "Role-Based Access Control"],
-            highlights: [
-                "Live supplier integration: token-authenticated inventory feed for a manufacturer's dealer program",
-                "Wholesale pricing system with per-customer discount tiers, guaranteed consistent via a shared pricing service",
-                "Core-charge deposit/refund tracking — a diesel-industry-specific workflow",
-                "Deployed across Netlify (storefront + admin), Render (API), and Neon (Postgres)",
-            ],
-            liveUrl: null,
-            githubUrl: "https://github.com/Moocifur/dis-shop",
-            icon: <Database className="w-6 h-6" />,
-        },
-        {
-            id: 1,
-            title: "Lane Orthodontics",
-            description: "Production Next.js website for a two-location orthodontics practice. Features location-based routing with unique theming per office, integrated JotForm booking system, and SEO optimization for local search.",
-            image: "/lane.jpeg",
-            category: "client",
-            clientType: "Production Client Site",
-            technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS", "JotForm API"],
-            technicalFeatures: ["Location-Based Routing", "Third-Party API Integration", "SEO Optimization", "Responsive Design"],
-            highlights: ["Dual-location theming system", "Integrated booking flow", "Deployed and maintained in production", "Client communication & project management"],
-            liveUrl: "https://laneorthodontics.com/",
-            githubUrl: "https://github.com/Moocifur/lane-orthodontics",
-            icon: <Monitor className="w-6 h-6" />,
-        },
+
         {
             id: 3,
             title: "David's Barbook",
@@ -80,8 +100,8 @@ const Projects = () => {
             technologies: ["React", "React Router", "Custom Hooks", "Fake Store API"],
             technicalFeatures: ["Client-Side Routing", "State Management", "REST API Integration", "Custom Hooks"],
             highlights: ["Complete shopping cart logic", "React Router implementation", "Custom useCart hook", "API data fetching patterns"],
-            liveUrl: "https://daves-shopping-cart.netlify.app/", 
-            githubUrl: "https://github.com/Moocifur/react-shopping-cart", 
+            liveUrl: "https://daves-shopping-cart.netlify.app/",
+            githubUrl: "https://github.com/Moocifur/react-shopping-cart",
             icon: <Globe className="w-6 h-6" />,
         },
     ];
@@ -89,16 +109,16 @@ const Projects = () => {
     return (
         <section id="projects" className="py-20 bg-gray-900">
             <div className="container mx-auto px-4">
-                
+
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-medium mb-4 text-white" 
+                    <h2 className="text-4xl md:text-5xl font-medium mb-4 text-white"
                         style={{ letterSpacing: '-0.025em', lineHeight: '1.1' }}>
                         Projects
                     </h2>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto" 
-                       style={{ lineHeight: '1.6' }}>
-                        A mix of production client sites and personal projects — each built to solve real problems 
+                    <p className="text-xl text-gray-400 max-w-3xl mx-auto"
+                        style={{ lineHeight: '1.6' }}>
+                        A mix of production client sites and personal projects — each built to solve real problems
                         and deepen my understanding of modern web development.
                     </p>
                 </div>
@@ -107,10 +127,10 @@ const Projects = () => {
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {projects.map((project) => {
                         const isLoaded = imageLoaded[project.id];
-                        
+
                         return (
                             <div key={project.id} className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden">
-                                
+
                                 {/* Project Image with Skeleton Loader */}
                                 <div className="relative overflow-hidden h-48">
                                     {!isLoaded && (
@@ -120,30 +140,28 @@ const Projects = () => {
                                             </div>
                                         </div>
                                     )}
-                                    
+
                                     {project.liveUrl ? (
-                                        <a 
+                                        <a
                                             href={project.liveUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="block cursor-pointer"
                                         >
-                                            <img 
-                                                src={project.image} 
+                                            <img
+                                                src={project.image}
                                                 alt={project.title}
-                                                className={`w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 ${
-                                                    isLoaded ? 'opacity-100' : 'opacity-0'
-                                                }`}
+                                                className={`w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
+                                                    }`}
                                                 onLoad={() => handleImageLoad(project.id)}
                                             />
                                         </a>
                                     ) : (
-                                        <img 
-                                            src={project.image} 
+                                        <img
+                                            src={project.image}
                                             alt={project.title}
-                                            className={`w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 ${
-                                                isLoaded ? 'opacity-100' : 'opacity-0'
-                                            }`}
+                                            className={`w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
+                                                }`}
                                             onLoad={() => handleImageLoad(project.id)}
                                         />
                                     )}
@@ -151,15 +169,14 @@ const Projects = () => {
 
                                 {/* Project Content */}
                                 <div className="p-6">
-                                    
+
                                     {/* Project Type Badge */}
-                                    <div className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-3 ${
-                                        project.category === 'client'
+                                    <div className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-3 ${project.category === 'client'
                                             ? 'bg-blue-600 text-white'
-                                            : project.category === 'in-progress'
-                                            ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
-                                            : 'bg-slate-600 text-slate-200'
-                                    }`}>
+                                            : project.category === 'demo'
+                                                ? 'bg-emerald-600 text-white'
+                                                : 'bg-slate-600 text-slate-200'
+                                        }`}>
                                         {project.clientType}
                                     </div>
 
@@ -168,27 +185,27 @@ const Projects = () => {
                                         <div className="text-blue-400 mr-3">
                                             {project.icon}
                                         </div>
-                                        <h3 className="text-xl font-medium text-white" 
+                                        <h3 className="text-xl font-medium text-white"
                                             style={{ lineHeight: '1.3' }}>
                                             {project.title}
                                         </h3>
                                     </div>
 
                                     {/* Description */}
-                                    <p className="text-gray-400 mb-4 text-sm" 
-                                       style={{ lineHeight: '1.6' }}>
+                                    <p className="text-gray-400 mb-4 text-sm"
+                                        style={{ lineHeight: '1.6' }}>
                                         {project.description}
                                     </p>
 
                                     {/* Technical Features */}
                                     <div className="mb-4 p-3 bg-gray-700 rounded-lg">
-                                        <h4 className="text-blue-400 text-xs font-medium mb-2 uppercase tracking-wide" 
+                                        <h4 className="text-blue-400 text-xs font-medium mb-2 uppercase tracking-wide"
                                             style={{ letterSpacing: '0.05em' }}>
                                             Technical Highlights
                                         </h4>
                                         <div className="flex flex-wrap gap-2">
                                             {project.technicalFeatures.map((feature, idx) => (
-                                                <span 
+                                                <span
                                                     key={idx}
                                                     className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-xs border border-blue-500/30"
                                                     style={{ lineHeight: '1.3' }}
@@ -202,7 +219,7 @@ const Projects = () => {
                                     {/* Action Buttons */}
                                     <div className="flex space-x-3 mb-4">
                                         {project.liveUrl && (
-                                            <a 
+                                            <a
                                                 href={project.liveUrl}
                                                 className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm font-medium transition-colors"
                                                 target="_blank"
@@ -212,7 +229,7 @@ const Projects = () => {
                                                 Live Site
                                             </a>
                                         )}
-                                        <a 
+                                        <a
                                             href={project.githubUrl}
                                             className="flex items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors"
                                             target="_blank"
@@ -225,7 +242,7 @@ const Projects = () => {
 
                                     {/* Key Highlights */}
                                     <div className="mb-4">
-                                        <h4 className="text-green-400 text-xs font-medium mb-2 uppercase tracking-wide" 
+                                        <h4 className="text-green-400 text-xs font-medium mb-2 uppercase tracking-wide"
                                             style={{ letterSpacing: '0.05em' }}>
                                             Key Highlights
                                         </h4>
@@ -233,8 +250,8 @@ const Projects = () => {
                                             {project.highlights.map((highlight, idx) => (
                                                 <div key={idx} className="flex items-center space-x-2">
                                                     <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                                                    <span className="text-sm text-gray-300" 
-                                                          style={{ lineHeight: '1.5' }}>
+                                                    <span className="text-sm text-gray-300"
+                                                        style={{ lineHeight: '1.5' }}>
                                                         {highlight}
                                                     </span>
                                                 </div>
@@ -249,7 +266,7 @@ const Projects = () => {
                                         </h5>
                                         <div className="flex flex-wrap gap-2">
                                             {project.technologies.map((tech, idx) => (
-                                                <span 
+                                                <span
                                                     key={idx}
                                                     className="px-2 py-1 bg-gray-600 text-gray-300 rounded text-xs"
                                                     style={{ lineHeight: '1.3' }}
@@ -272,13 +289,13 @@ const Projects = () => {
                         Want to see more or discuss my approach to these projects?
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a 
+                        <a
                             href="#contact"
                             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 px-8 py-4 rounded-lg font-medium text-lg transition-all text-white hover:scale-105"
                         >
                             Get In Touch
                         </a>
-                        <a 
+                        <a
                             href="https://github.com/Moocifur"
                             target="_blank"
                             rel="noopener noreferrer"
